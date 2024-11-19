@@ -5,16 +5,15 @@ using System;
 public partial class MainView : Node2D
 {
 	Label honeyLabel;
+	Label woodLabel;
 	MainViewModel viewModel;
-
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-        GD.Print("lol");
-        honeyLabel = GetTree().Root.GetNode("Main/MainGui").GetNode<Label>("Honey");
-        GD.Print("lalka");
-		viewModel = new MainViewModel(SetHoneyLabel);
+        honeyLabel = GetTree().Root.GetNode("Main/MainGui").GetNode<Label>("Resources/Honey");
+        woodLabel = GetTree().Root.GetNode("Main/MainGui").GetNode<Label>("Resources/Wood");
+		viewModel = new MainViewModel(SetHoneyLabel, SetWoodLabel);
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,5 +26,9 @@ public partial class MainView : Node2D
 	{
 		honeyLabel.Text = "Honey: " + newValue.ToString();
 	}
+    void SetWoodLabel(int newValue)
+    {
+        woodLabel.Text = "Wood: " + newValue.ToString();
+    }
 
 }

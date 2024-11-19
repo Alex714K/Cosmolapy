@@ -12,6 +12,8 @@ namespace Cosmolapy.scenes.main
     {
         private int honey;
         Action<int> setHoney;
+        private int wood;
+        Action<int> setWood;
 
         public int Honey
         {
@@ -26,10 +28,26 @@ namespace Cosmolapy.scenes.main
             }
         }
 
-        public MainModel(Action<int> _setHoney)
+        public int Wood
+        {
+            set
+            {
+                this.wood = value;
+                setWood(wood);
+            }
+            get
+            {
+                return wood;
+            }
+        }
+
+
+        public MainModel(Action<int> _setHoney, Action<int> _setWood)
         {
             setHoney = _setHoney;
+            setWood = _setWood;
             Honey = 10;
+            Wood = 20;
             
         }
 
