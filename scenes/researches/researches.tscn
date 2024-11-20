@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://jay6o4qxyxfp"]
+
+[ext_resource type="Script" path="res://scenes/researches/BackButton.cs" id="1_8piks"]
+
+[node name="Researches" type="Node2D"]
+
+[node name="Gui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackButton" type="Button" parent="Gui"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 25
+text = "Назад"
+script = ExtResource("1_8piks")

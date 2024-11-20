@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://esiratcjljl"]
+[gd_scene load_steps=2 format=3 uid="uid://esiratcjljl"]
+
+[ext_resource type="Script" path="res://scenes/main/ResearchButton.cs" id="1_eurdq"]
 
 [node name="MainGui" type="Control"]
 layout_mode = 3
@@ -15,7 +17,7 @@ offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(0.364706, 0.313726, 0.290196, 1)
 
-[node name="Button" type="Button" parent="BotBar"]
+[node name="ResearchButton" type="Button" parent="BotBar"]
 layout_mode = 0
 offset_left = 33.0
 offset_top = 47.0
@@ -23,6 +25,7 @@ offset_right = 259.0
 offset_bottom = 97.0
 theme_override_font_sizes/font_size = 30
 text = "Исследования"
+script = ExtResource("1_eurdq")
 
 [node name="Resources" type="ColorRect" parent="."]
 layout_mode = 0
