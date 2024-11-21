@@ -13,12 +13,6 @@ struct CellData
     {
         name = _name;
         isDone = false;
-        priceHoney = _priceHoney;
-    }
-    public CellData(string _name) 
-    {
-        name = _name;
-        isDone = false;
         priceHoney = 10;
     }
 }
