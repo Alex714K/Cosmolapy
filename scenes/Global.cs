@@ -11,5 +11,6 @@ namespace Cosmolapy.scenes
     internal static class Global
     {
         public static MainModel mainModel;
+        public static CellsModel cellsModel;
     }
 }

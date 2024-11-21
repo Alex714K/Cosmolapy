@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-struct CellData
+public struct CellData
 {
     public readonly string name;
     public bool isDone = false;
@@ -13,20 +13,25 @@ struct CellData
     {
         name = _name;
         isDone = false;
-        priceHoney = 10;
+        priceHoney = _priceHoney;
     }
 }
 
 namespace Cosmolapy.scenes.researches
 {
-    internal class Cell
+    public class Cell
     {
-        CellData data;
+        public CellData data;
         private List<Cell> children;
 
         public Cell(string _name, int _priceHoney)
         {
             data = new CellData(_name, _priceHoney);
+        }
+
+        public Cell(CellData _data)
+        {
+            data = _data;
         }
 
         List<Cell> GetChildren()

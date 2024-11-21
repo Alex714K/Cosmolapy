@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Cosmolapy.scenes.researches
 {
-    internal class ResearcherViewModel
+    internal class CellsViewModel
     {
-
-
+        public CellsViewModel(Action<List<Cell>> fillCells)
+        {
+            Global.cellsModel = new CellsModel(fillCells);
+        }
 
     }
 }

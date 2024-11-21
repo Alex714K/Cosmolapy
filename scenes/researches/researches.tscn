@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://jay6o4qxyxfp"]
+[gd_scene load_steps=4 format=3 uid="uid://jay6o4qxyxfp"]
 
 [ext_resource type="Script" path="res://scenes/researches/BackButton.cs" id="1_8piks"]
-[ext_resource type="Script" path="res://scenes/researches/ResearchesView.cs" id="1_77w2e"]
+[ext_resource type="Script" path="res://scenes/researches/CellsView.cs" id="3_jspwr"]
+[ext_resource type="Script" path="res://scenes/researches/CellView.cs" id="4_pf8cc"]
 
 [node name="Researches" type="Node2D"]
-script = ExtResource("1_77w2e")
 
 [node name="Gui" type="Control" parent="."]
 layout_mode = 3
@@ -21,9 +21,12 @@ text = "Назад"
 script = ExtResource("1_8piks")
 
 [node name="Cells" type="Node" parent="Gui"]
+script = ExtResource("3_jspwr")
 
 [node name="BaseCell" type="Button" parent="Gui/Cells"]
-offset_left = 363.0
-offset_top = 70.0
-offset_right = 455.0
-offset_bottom = 123.0
+offset_left = -224.0
+offset_top = 106.0
+offset_right = -132.0
+offset_bottom = 159.0
+text = "asd"
+script = ExtResource("4_pf8cc")
