@@ -9,7 +9,13 @@ struct CellData
     public readonly string name;
     public bool isDone = false;
     public int priceHoney;
-    public CellData(string _name, int _priceHoney) 
+    public CellData(string _name, int _priceHoney)
+    {
+        name = _name;
+        isDone = false;
+        priceHoney = _priceHoney;
+    }
+    public CellData(string _name) 
     {
         name = _name;
         isDone = false;
