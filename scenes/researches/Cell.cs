@@ -8,10 +8,12 @@ struct CellData
 {
     public readonly string name;
     public bool isDone = false;
-    public CellData(string _name) 
+    public int priceHoney;
+    public CellData(string _name, int _priceHoney) 
     {
         name = _name;
         isDone = false;
+        priceHoney = 10;
     }
 }
 
@@ -22,10 +24,9 @@ namespace Cosmolapy.scenes.researches
         CellData data;
         private List<Cell> children;
 
-        public Cell(string _name)
+        public Cell(string _name, int _priceHoney)
         {
-            data = new CellData(_name);
-
+            data = new CellData(_name, _priceHoney);
         }
 
         List<Cell> GetChildren()

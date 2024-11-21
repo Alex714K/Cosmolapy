@@ -10,48 +10,10 @@ namespace Cosmolapy.scenes.main
 {
     internal class MainModel
     {
-        private int honey;
-        Action<int> setHoney;
-        private int wood;
-        Action<int> setWood;
-
-        public int Honey
-        {
-            set
-            {
-                this.honey = value;
-                setHoney(honey);
-            }
-            get
-            {
-                return honey;
-            }
-        }
-
-        public int Wood
-        {
-            set
-            {
-                this.wood = value;
-                setWood(wood);
-            }
-            get
-            {
-                return wood;
-            }
-        }
-
-
+        Resources resources;
         public MainModel(Action<int> _setHoney, Action<int> _setWood)
         {
-            setHoney = _setHoney;
-            setWood = _setWood;
-            Honey = 10;
-            Wood = 20;
-            
+            resources = new Resources(_setHoney, _setWood);
         }
-
-
-
     }
 }
