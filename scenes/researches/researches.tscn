@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://jay6o4qxyxfp"]
+[gd_scene load_steps=5 format=3 uid="uid://jay6o4qxyxfp"]
 
 [ext_resource type="Script" path="res://scenes/researches/BackButton.cs" id="1_8piks"]
 [ext_resource type="Script" path="res://scenes/researches/CellsView.cs" id="3_jspwr"]
 [ext_resource type="Script" path="res://scenes/researches/CellView.cs" id="4_pf8cc"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_r886b"]
 
 [node name="Researches" type="Node2D"]
 
@@ -24,6 +26,7 @@ script = ExtResource("1_8piks")
 script = ExtResource("3_jspwr")
 
 [node name="BaseCell" type="Button" parent="Gui/Cells"]
+material = SubResource("CanvasItemMaterial_r886b")
 offset_left = -224.0
 offset_top = 106.0
 offset_right = -132.0

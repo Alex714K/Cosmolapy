@@ -13,7 +13,7 @@ namespace Cosmolapy.scenes.researches
         public CellsModel(Action<List<Cell>> fillCells)
         {
             cells = new List<Cell>();
-            cells.Add(new Cell("lol", 100));
+            cells.Add(new Cell("Flight", 100));
             fillCells(cells);
         }
 

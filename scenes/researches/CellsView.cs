@@ -30,7 +30,6 @@ public partial class CellsView : Node
     private void FillCells(List<Cell> modelCells)
     {
         viewCells.Add((CellView)sampleCell.Duplicate());
-        GD.Print(sampleCell.Text);
         viewCells[viewCells.Count - 1].SetData(modelCells[viewCells.Count - 1], new Vector2(100, 100));
 
         AddChild(viewCells[viewCells.Count - 1]);
