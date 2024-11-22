@@ -43,7 +43,7 @@ namespace Cosmolapy.scenes.main
         {
             setHoney = _setHoney;
             setWood = _setWood;
-            Honey = 10;
+            Honey = 100;
             Wood = 20;
 
         }
