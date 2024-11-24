@@ -10,7 +10,7 @@ namespace Cosmolapy.scenes.researches
     {
         public CellsViewModel(Action<List<Cell>> fillCells)
         {
-            Global.cellsModel = new CellsModel(fillCells);
+            fillCells(Global.cellsModel.cells);
         }
 
     }

@@ -9,25 +9,9 @@ namespace Cosmolapy.scenes.main
 {
     internal class MainViewModel
     {
-        private Action<int> setHoneyLabel;
-        private Action<int> setWoodLabel;
-
-        public MainViewModel(Action<int> _setHoneyLabel, Action<int> _setWoodLabel)
+        public MainViewModel()
         {
-            setHoneyLabel = _setHoneyLabel;
-            setWoodLabel = _setWoodLabel;
-            Global.mainModel = new MainModel(SetHoney, SetWoodLabel);
-        }
 
-        void SetHoney(int newHoney)
-        {
-            setHoneyLabel(newHoney);
         }
-        void SetWoodLabel(int newHoney)
-        {
-            setWoodLabel(newHoney);
-        }
-
-
     }
 }

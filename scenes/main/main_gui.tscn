@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://esiratcjljl"]
+[gd_scene load_steps=3 format=3 uid="uid://esiratcjljl"]
 
 [ext_resource type="Script" path="res://scenes/main/ResearchButton.cs" id="1_eurdq"]
+[ext_resource type="Script" path="res://scenes/main/ShopButton.cs" id="2_be2ud"]
 
 [node name="MainGui" type="Control"]
 layout_mode = 3
@@ -27,6 +28,16 @@ theme_override_font_sizes/font_size = 30
 text = "Исследования"
 script = ExtResource("1_eurdq")
 
+[node name="ShopButton" type="Button" parent="BotBar"]
+offset_left = 361.0
+offset_top = 47.0
+offset_right = 587.0
+offset_bottom = 97.0
+theme_override_font_sizes/font_size = 30
+text = "Магазин
+"
+script = ExtResource("2_be2ud")
+
 [node name="Resources" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 1280.0
@@ -36,15 +47,15 @@ color = Color(0.364706, 0.313726, 0.290196, 1)
 [node name="Honey" type="Label" parent="Resources"]
 layout_mode = 0
 offset_left = 36.0
-offset_right = 199.0
+offset_right = 236.0
 offset_bottom = 140.0
 theme_override_font_sizes/font_size = 30
 text = "Мед: "
 
 [node name="Wood" type="Label" parent="Resources"]
 layout_mode = 0
-offset_left = 198.0
-offset_right = 361.0
+offset_left = 241.0
+offset_right = 404.0
 offset_bottom = 140.0
 theme_override_font_sizes/font_size = 30
 text = "Дерево: "

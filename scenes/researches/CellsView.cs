@@ -16,22 +16,21 @@ public partial class CellsView : Node
         sampleCell = GetTree().Root.GetNode("Researches").GetNode<CellView>("Gui/Cells/BaseCell");
         viewModel = new CellsViewModel(FillCells);
     }
-
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 	}
 
-    private void AddCell()
+    private void AddCell(Cell cell)
     {
+        viewCells.Add((CellView)sampleCell.Duplicate());
+        viewCells[viewCells.Count - 1].SetData(cell, new Vector2(100, 100));
 
+        AddChild(viewCells[viewCells.Count - 1]);
     }
 
     private void FillCells(List<Cell> modelCells)
     {
-        viewCells.Add((CellView)sampleCell.Duplicate());
-        viewCells[viewCells.Count - 1].SetData(modelCells[viewCells.Count - 1], new Vector2(100, 100));
-
-        AddChild(viewCells[viewCells.Count - 1]);
+        AddCell(modelCells[0]);
     }
 }
