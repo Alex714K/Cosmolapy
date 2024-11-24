@@ -6,14 +6,13 @@ using System;
 public partial class CellView : Button
 {
 	private Cell cellData;
+	private Action setDone;
 
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		Pressed += buttonPressed;
     }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 		if (cellData != null)
@@ -32,9 +31,10 @@ public partial class CellView : Button
 
     public void buttonPressed()
     {
-        if (Global.mainModel.resources.Honey >= cellData.data.priceHoney)
+        if (Global.mainModel.resources.Honey >= cellData.data.priceHoney && !cellData.data.isDone)
 		{
 			cellData.data.isDone = true;
+			Global.mainModel.resources.Honey -= cellData.data.priceHoney;
 		}
     }
 

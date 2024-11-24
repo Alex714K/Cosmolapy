@@ -10,12 +10,13 @@ namespace Cosmolapy.scenes.researches
     {
         public List<Cell> cells;
 
-        public CellsModel(Action<List<Cell>> fillCells)
+        public CellsModel()
         {
             cells = new List<Cell>();
             cells.Add(new Cell("Flight", 100));
-            fillCells(cells);
         }
+
+
 
     }
 }

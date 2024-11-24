@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://xb2jqojwku2s"]
+
+[ext_resource type="Script" path="res://scenes/researches/BackButton.cs" id="1_nhvop"]
+[ext_resource type="Texture2D" uid="uid://dqajlaifckmuq" path="res://scenes/Shop/Gustavo.jpg" id="2_wa7pg"]
+
+[node name="Shop" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("2_wa7pg")
+
+[node name="Gui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackButton" type="Button" parent="Gui"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 109.0
+theme_override_font_sizes/font_size = 25
+script = ExtResource("1_nhvop")

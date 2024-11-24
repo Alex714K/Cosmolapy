@@ -11,9 +11,10 @@ namespace Cosmolapy.scenes.main
     internal class MainModel
     {
         public Resources resources;
-        public MainModel(Action<int> _setHoney, Action<int> _setWood)
+        public MainModel()
         {
-            resources = new Resources(_setHoney, _setWood);
+            resources = new Resources();
         }
+
     }
 }

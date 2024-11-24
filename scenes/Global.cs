@@ -12,5 +12,10 @@ namespace Cosmolapy.scenes
     {
         public static MainModel mainModel;
         public static CellsModel cellsModel;
+        static Global()
+        {
+            mainModel = new MainModel();
+            cellsModel = new CellsModel();
+        }
     }
 }

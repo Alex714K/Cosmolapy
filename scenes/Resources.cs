@@ -1,24 +1,22 @@
-﻿using System;
+﻿using Godot;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cosmolapy.scenes.main
+namespace Cosmolapy.scenes
 {
     internal class Resources
     {
         private int honey;
-        Action<int> setHoney;
         private int wood;
-        Action<int> setWood;
 
         public int Honey
         {
             set
             {
-                this.honey = value;
-                setHoney(honey);
+                honey = value;
             }
             get
             {
@@ -28,10 +26,9 @@ namespace Cosmolapy.scenes.main
 
         public int Wood
         {
-            set
-            {
-                this.wood = value;
-                setWood(wood);
+            set {
+
+                wood = value;
             }
             get
             {
@@ -39,13 +36,10 @@ namespace Cosmolapy.scenes.main
             }
         }
 
-        public Resources(Action<int> _setHoney, Action<int> _setWood)
+        public Resources()
         {
-            setHoney = _setHoney;
-            setWood = _setWood;
-            Honey = 100;
+            Honey = 210;
             Wood = 20;
-
         }
 
     }
