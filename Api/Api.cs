@@ -18,4 +18,9 @@ public static class Api
     {
         RequestToServer.RegisterPlayer(playerRegistrationData);
     }
+
+    public static void UnregisterPlayer(PlayerRegistrationData playerRegistrationData)
+    {
+        RequestToServer.UnregisterPlayer(playerRegistrationData);
+    }
 }
