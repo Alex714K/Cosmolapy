@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class ShopButton : Button
+public partial class SignInButton : Button
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -14,9 +14,9 @@ public partial class ShopButton : Button
 	{
 	}
 
-	public void buttonPressed() 
+	public void buttonPressed()
 	{
-        GetTree().ChangeSceneToFile("res://scenes/shop/shop.tscn");
+        GetTree().ChangeSceneToFile("res://scenes/main/main.tscn");
     }
 
 }
