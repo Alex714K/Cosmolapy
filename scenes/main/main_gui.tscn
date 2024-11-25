@@ -29,6 +29,7 @@ text = "Исследования"
 script = ExtResource("1_eurdq")
 
 [node name="ShopButton" type="Button" parent="BotBar"]
+layout_mode = 0
 offset_left = 361.0
 offset_top = 47.0
 offset_right = 587.0

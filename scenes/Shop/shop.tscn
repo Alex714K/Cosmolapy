@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://xb2jqojwku2s"]
 
 [ext_resource type="Script" path="res://scenes/researches/BackButton.cs" id="1_nhvop"]
-[ext_resource type="Texture2D" uid="uid://dqajlaifckmuq" path="res://scenes/Shop/Gustavo.jpg" id="2_wa7pg"]
+[ext_resource type="Texture2D" uid="uid://dqajlaifckmuq" path="res://scenes/shop/Gustavo.jpg" id="2_wa7pg"]
 
 [node name="Shop" type="Node2D"]
 

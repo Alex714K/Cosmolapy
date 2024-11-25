@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class ShopButton : Button
+public partial class GoToSignInButton : Button
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -12,11 +12,12 @@ public partial class ShopButton : Button
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+
 	}
 
-	public void buttonPressed() 
+	public void buttonPressed()
 	{
-        GetTree().ChangeSceneToFile("res://scenes/shop/shop.tscn");
+        GetTree().ChangeSceneToFile("res://signIn/sign_in.tscn");
     }
 
 }

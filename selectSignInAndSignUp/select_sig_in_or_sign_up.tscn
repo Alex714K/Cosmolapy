@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfokx01r6551x"]
+
+[ext_resource type="Script" path="res://selectSignInAndSignUp/GoToSignInButton.cs" id="1_kfffv"]
+
+[node name="SelectSigInOrSignUp" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 150.0
+offset_right = 790.0
+offset_bottom = 370.0
+color = Color(0.905014, 0.421436, 5.77569e-07, 1)
+
+[node name="GoToSignInButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 180.0
+offset_right = 730.0
+offset_bottom = 240.0
+text = "SignIn"
+script = ExtResource("1_kfffv")
+
+[node name="SignUpButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 270.0
+offset_right = 730.0
+offset_bottom = 330.0
+text = "SignUp
+"
