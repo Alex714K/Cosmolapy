@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xjwm4yfe5ah4"
-path="res://.godot/imported/CellButtonDone.png-7b2eae5454773d249fbe892161d464cf.ctex"
+path="res://.godot/imported/CellButtonDone.png-d54283b4188e943cab0a0bc7150312ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/researches/CellButtonDone.png"
-dest_files=["res://.godot/imported/CellButtonDone.png-7b2eae5454773d249fbe892161d464cf.ctex"]
+source_file="res://CellButtonDone.png"
+dest_files=["res://.godot/imported/CellButtonDone.png-d54283b4188e943cab0a0bc7150312ca.ctex"]
 
 [params]
 

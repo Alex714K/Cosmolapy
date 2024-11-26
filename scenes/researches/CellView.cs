@@ -31,9 +31,9 @@ public partial class CellView : Button
 
     public void buttonPressed()
     {
-        if (Global.mainModel.resources.Honey >= cellData.data.priceHoney && !cellData.data.isDone)
+        if (Global.mainModel.resources.Honey >= cellData.data.priceHoney && !cellData.data.isDone && cellData.parentDone)
 		{
-			cellData.data.isDone = true;
+			cellData.setDone();
 			Global.mainModel.resources.Honey -= cellData.data.priceHoney;
 		}
     }

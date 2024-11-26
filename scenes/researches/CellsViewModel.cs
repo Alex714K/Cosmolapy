@@ -8,7 +8,7 @@ namespace Cosmolapy.scenes.researches
 {
     internal class CellsViewModel
     {
-        public CellsViewModel(Action<List<Cell>> fillCells)
+        public CellsViewModel(Action<Dictionary<string, Cell>> fillCells)
         {
             fillCells(Global.cellsModel.cells);
         }

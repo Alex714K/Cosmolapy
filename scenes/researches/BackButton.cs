@@ -7,7 +7,6 @@ public partial class BackButton : Button
 	public override void _Ready()
 	{
 		Pressed += buttonPressed;
-
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
