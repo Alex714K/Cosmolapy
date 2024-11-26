@@ -17,7 +17,7 @@ public partial class GoToSignInButton : Button
 
 	public void buttonPressed()
 	{
-        GetTree().ChangeSceneToFile("res://signIn/sign_in.tscn");
+        GetTree().ChangeSceneToFile("res://scenes/signIn/sign_in.tscn");
     }
 
 }
