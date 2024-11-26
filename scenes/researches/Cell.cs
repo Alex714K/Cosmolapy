@@ -23,11 +23,14 @@ namespace Cosmolapy.scenes.researches
     public class Cell
     {
         public CellData data;
-        private List<Cell> children;
+        public List<Cell> children;
+        public bool parentDone;
 
-        public Cell(string _name, int _priceHoney)
+        public Cell(string _name, int _priceHoney, bool _parentDone)
         {
             data = new CellData(_name, _priceHoney);
+            children = new List<Cell>();
+            parentDone = _parentDone;
         }
 
         public Cell(CellData _data)
@@ -45,6 +48,10 @@ namespace Cosmolapy.scenes.researches
         public void setDone()
         {
             data.isDone = true;
+            for (int i = 0; i < children.Count; i++)
+            {
+                children[i].parentDone = true;
+            }
         }
 
     }

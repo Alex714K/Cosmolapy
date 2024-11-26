@@ -1,7 +1,9 @@
+using Cosmolapy.scenes;
 using Cosmolapy.scenes.researches;
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class CellsView : Node
 {
@@ -9,28 +11,39 @@ public partial class CellsView : Node
     private List<CellView> viewCells;
     private CellsViewModel viewModel;
 
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
+    Label honeyLabel;
+
+    List<List<int>> maxWidths = new List<List<int>>();
+
+    // Called when the node enters the scene tree for the first time.
+    public override void _Ready()
 	{
         viewCells = new List<CellView>();
         sampleCell = GetTree().Root.GetNode("Researches").GetNode<CellView>("Gui/Cells/BaseCell");
         viewModel = new CellsViewModel(FillCells);
+
+        honeyLabel = GetTree().Root.GetNode("Researches").GetNode<Label>("HoneyLabel");
+
     }
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-	}
-
-    private void AddCell(Cell cell)
+        honeyLabel.Text = "Honey: " + Global.mainModel.resources.Honey.ToString();
+    }
+    private void AddCell(Cell cell, Vector2 position)
     {
         viewCells.Add((CellView)sampleCell.Duplicate());
-        viewCells[viewCells.Count - 1].SetData(cell, new Vector2(100, 100));
+        viewCells[viewCells.Count - 1].SetData(cell, position);
 
         AddChild(viewCells[viewCells.Count - 1]);
     }
 
-    private void FillCells(List<Cell> modelCells)
+    private void FillCells(Dictionary<string, Cell> modelCells)
     {
-        AddCell(modelCells[0]);
+        AddCell(modelCells["Rocket"], new Vector2(120, 100));
+        AddCell(modelCells["Rocket"].children[0], new Vector2(120 - 60, 200));
+        AddCell(modelCells["Rocket"].children[0].children[0], new Vector2(120 - 60, 300));
+        AddCell(modelCells["Rocket"].children[1], new Vector2(120 + 60, 200));
+        AddCell(modelCells["Rocket"].children[1].children[0], new Vector2(120 + 60, 300));
     }
 }

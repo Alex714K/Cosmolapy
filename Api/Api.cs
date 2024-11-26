@@ -11,7 +11,7 @@ public static class Api
 {
     public static void UpdateResources(List<ResourceForServer> resources)
     {
-        RequestToServer.
+
     }
 
     public static void RegisterPlayer(PlayerRegistrationData playerRegistrationData)

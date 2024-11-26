@@ -33,3 +33,10 @@ offset_right = -132.0
 offset_bottom = 159.0
 text = "asd"
 script = ExtResource("4_pf8cc")
+
+[node name="HoneyLabel" type="Label" parent="."]
+offset_left = 115.0
+offset_right = 315.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 30
+text = "Honey: "
