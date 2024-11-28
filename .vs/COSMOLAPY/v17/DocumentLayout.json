@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\NextMoveButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scenes\\main\\NextMoveButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\scenes\\main\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:scenes\\main\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\scenes\\main\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:scenes\\main\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\nextmovable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:nextmovable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\buildings\\generators\\generator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:buildings\\generators\\generator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\buildings\\generators\\mednica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:buildings\\generators\\mednica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\buildings\\generators\\sawmill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:buildings\\generators\\sawmill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\buildings\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:buildings\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\scenes\\main\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:scenes\\main\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\scenes\\main\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:scenes\\main\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\resources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,73 +46,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 195,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Global.cs",
-              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Global.cs",
-              "RelativeDocumentMoniker": "Global.cs",
-              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Global.cs",
-              "RelativeToolTip": "Global.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T11:28:31.888Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainView.cs",
-              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainView.cs",
-              "RelativeDocumentMoniker": "scenes\\main\\MainView.cs",
-              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainView.cs",
-              "RelativeToolTip": "scenes\\main\\MainView.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBIAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T11:11:59.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NextMoveButton.cs",
-              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\NextMoveButton.cs",
-              "RelativeDocumentMoniker": "scenes\\main\\NextMoveButton.cs",
-              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\NextMoveButton.cs",
-              "RelativeToolTip": "scenes\\main\\NextMoveButton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T11:02:55.8Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Resources.cs",
-              "DocumentMoniker": "I:\\.FILES\\PROGRAMM\\GODOT\\COSMOLAPY\\Resources.cs",
-              "RelativeDocumentMoniker": "Resources.cs",
-              "ToolTip": "I:\\.FILES\\PROGRAMM\\GODOT\\COSMOLAPY\\Resources.cs",
-              "RelativeToolTip": "Resources.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAiwDAAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T10:56:31.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainModel.cs",
-              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainModel.cs",
-              "RelativeDocumentMoniker": "scenes\\main\\MainModel.cs",
-              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainModel.cs",
-              "RelativeToolTip": "scenes\\main\\MainModel.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T10:48:42.684Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -104,6 +55,122 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Sawmill.cs",
+              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Buildings\\Generators\\Sawmill.cs",
+              "RelativeDocumentMoniker": "Buildings\\Generators\\Sawmill.cs",
+              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Buildings\\Generators\\Sawmill.cs",
+              "RelativeToolTip": "Buildings\\Generators\\Sawmill.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAwA0AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T20:36:08.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Mednica.cs",
+              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Buildings\\Generators\\Mednica.cs",
+              "RelativeDocumentMoniker": "Buildings\\Generators\\Mednica.cs",
+              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Buildings\\Generators\\Mednica.cs",
+              "RelativeToolTip": "Buildings\\Generators\\Mednica.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAWwA4AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T17:04:56.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Generator.cs",
+              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Buildings\\Generators\\Generator.cs",
+              "RelativeDocumentMoniker": "Buildings\\Generators\\Generator.cs",
+              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Buildings\\Generators\\Generator.cs",
+              "RelativeToolTip": "Buildings\\Generators\\Generator.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T16:51:54.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Building.cs",
+              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Buildings\\Building.cs",
+              "RelativeDocumentMoniker": "Buildings\\Building.cs",
+              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Buildings\\Building.cs",
+              "RelativeToolTip": "Buildings\\Building.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T17:01:27.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NextMovable.cs",
+              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\NextMovable.cs",
+              "RelativeDocumentMoniker": "NextMovable.cs",
+              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\NextMovable.cs",
+              "RelativeToolTip": "NextMovable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T16:50:59.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Global.cs",
+              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Global.cs",
+              "RelativeDocumentMoniker": "Global.cs",
+              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Global.cs",
+              "RelativeToolTip": "Global.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T11:28:31.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainModel.cs",
+              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainModel.cs",
+              "RelativeDocumentMoniker": "scenes\\main\\MainModel.cs",
+              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainModel.cs",
+              "RelativeToolTip": "scenes\\main\\MainModel.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAgwCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T10:48:42.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainView.cs",
+              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainView.cs",
+              "RelativeDocumentMoniker": "scenes\\main\\MainView.cs",
+              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainView.cs",
+              "RelativeToolTip": "scenes\\main\\MainView.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T11:11:59.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Resources.cs",
+              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Resources.cs",
+              "RelativeDocumentMoniker": "Resources.cs",
+              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Resources.cs",
+              "RelativeToolTip": "Resources.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAiwDAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T10:56:31.102Z"
             }
           ]
         }
