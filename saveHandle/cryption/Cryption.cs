@@ -1,12 +1,8 @@
-using System;
-using System.Security.Cryptography;
-using System.Text;
-
-namespace Cosmolapy.Api.Cryption;
+namespace Cosmolapy.saveHandle.cryption;
 
 public class Cryption
 {
-	private const string alphabet = "abcdefghijklmnopqrstuvwxyz0123456789";
+	private const string alphabet = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	private const int distanceOfAlphabet = 36;
 
 	private const int firstKey = 5;

@@ -1,15 +1,28 @@
 using System;
 using System.Net.Http;
 using Cosmolapy.scenes;
-using Cosmolapy.Api.StructuresOfData.JsonFormats;
-using Cosmolapy.Api.StructuresOfData;
+using Cosmolapy.saveHandle.structuresOfData.jsonFormats;
+using Cosmolapy.saveHandle.structuresOfData;
 using System.Net.Http.Json;
 using System.Collections.Generic;
+using Microsoft.Data.Sqlite;
+using GD = Godot;
 
-namespace Cosmolapy.Api.Requests;
+namespace Cosmolapy.saveHandle.functions;
 
 public static class RequestToServer
 {
+    // public static bool UpdateResources(PlayerRegistrationData playerRegistrationData, List<ResourceForServer> resources)
+    public static void UpdateResources()
+    {
+
+    }
+
+    /// <summary>
+    /// Регистрирует игрока. При неуспешной регистрации возвращает false. При успешной - true.
+    /// </summary>
+    /// <param name="playerRegistrationData"></param>
+    /// <returns>Статус успеха регистрации</returns>
     public static bool RegisterPlayer(PlayerRegistrationData playerRegistrationData)
     {
         using (var client = new HttpClient())
