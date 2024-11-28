@@ -1,4 +1,4 @@
-using Cosmolapy.scenes;
+using Cosmolapy;
 using Godot;
 using System;
 

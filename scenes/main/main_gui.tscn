@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://esiratcjljl"]
+[gd_scene load_steps=4 format=3 uid="uid://esiratcjljl"]
 
 [ext_resource type="Script" path="res://scenes/main/ResearchButton.cs" id="1_eurdq"]
 [ext_resource type="Script" path="res://scenes/main/ShopButton.cs" id="2_be2ud"]
+[ext_resource type="Script" path="res://scenes/main/NextMoveButton.cs" id="3_2grc1"]
 
 [node name="MainGui" type="Control"]
 layout_mode = 3
@@ -61,3 +62,23 @@ offset_right = 404.0
 offset_bottom = 140.0
 theme_override_font_sizes/font_size = 30
 text = "Wood: "
+
+[node name="NextMoveButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1158.0
+offset_top = 498.0
+offset_right = 1278.0
+offset_bottom = 578.0
+theme_override_font_sizes/font_size = 52
+text = "->"
+script = ExtResource("3_2grc1")
+
+[node name="MoveLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1178.0
+offset_top = 454.0
+offset_right = 1278.0
+offset_bottom = 496.0
+theme_override_font_sizes/font_size = 30
+text = "1"
+horizontal_alignment = 2

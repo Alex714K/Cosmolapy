@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cosmolapy.scenes
+namespace Cosmolapy
 {
     internal class Resources
     {
@@ -26,7 +26,8 @@ namespace Cosmolapy.scenes
 
         public int Wood
         {
-            set {
+            set
+            {
 
                 wood = value;
             }
@@ -40,6 +41,12 @@ namespace Cosmolapy.scenes
         {
             Honey = 210;
             Wood = 20;
+        }
+
+        public Resources(int _honey, int _wood)
+        {
+            Honey = _honey;
+            Wood = _wood;
         }
 
     }
