@@ -1,6 +1,4 @@
-using System;
-
-namespace Cosmolapy.Api.StructuresOfData;
+namespace Cosmolapy.saveHandle.structuresOfData;
 
 public readonly struct PlayerRegistrationData
 {

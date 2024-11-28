@@ -1,7 +1,6 @@
-using System;
 using System.Collections.Generic;
 
-namespace Cosmolapy.Api.StructuresOfData.JsonFormats;
+namespace Cosmolapy.saveHandle.structuresOfData.jsonFormats;
 
 public struct JsonPlayerData
 {
