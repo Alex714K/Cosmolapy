@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://esiratcjljl"]
+[gd_scene load_steps=5 format=3 uid="uid://esiratcjljl"]
 
 [ext_resource type="Script" path="res://scenes/main/ResearchButton.cs" id="1_eurdq"]
 [ext_resource type="Script" path="res://scenes/main/ShopButton.cs" id="2_be2ud"]
 [ext_resource type="Script" path="res://scenes/main/NextMoveButton.cs" id="3_2grc1"]
+[ext_resource type="Script" path="res://scenes/main/GeneratorView.cs" id="4_0ncui"]
 
 [node name="MainGui" type="Control"]
 layout_mode = 3
@@ -82,3 +83,45 @@ offset_bottom = 496.0
 theme_override_font_sizes/font_size = 30
 text = "1"
 horizontal_alignment = 2
+
+[node name="Buildings" type="Node" parent="."]
+
+[node name="SampleGenerator" type="Node2D" parent="Buildings"]
+position = Vector2(-388, 172)
+script = ExtResource("4_0ncui")
+
+[node name="UpgradeButton" type="Button" parent="Buildings/SampleGenerator"]
+offset_left = 34.0
+offset_top = 220.0
+offset_right = 184.0
+offset_bottom = 327.0
+theme_override_font_sizes/font_size = 28
+text = "Upgrade"
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="Label" parent="Buildings/SampleGenerator"]
+offset_left = 34.0
+offset_right = 111.0
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 28
+text = "name"
+metadata/_edit_use_anchors_ = true
+
+[node name="ChangeHoneyLabel" type="Label" parent="Buildings/SampleGenerator"]
+offset_left = 34.0
+offset_top = 46.0
+offset_right = 74.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 28
+text = "10"
+metadata/_edit_use_anchors_ = true
+
+[node name="ChangeWoodLabel" type="Label" parent="Buildings/SampleGenerator"]
+offset_left = 135.0
+offset_top = 46.0
+offset_right = 175.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 28
+text = "10
+"
+metadata/_edit_use_anchors_ = true

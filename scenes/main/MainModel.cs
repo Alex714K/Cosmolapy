@@ -14,8 +14,8 @@ namespace Cosmolapy.scenes.main
         private int move;
         public Resources resources;
         List<NextMovable> movables;
-        Sawmill sawmill;
-        Mednica mednica;
+        public Sawmill sawmill;
+        public Mednica mednica;
 
         public int Move
         {

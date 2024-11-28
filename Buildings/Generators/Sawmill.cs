@@ -14,11 +14,5 @@ namespace Cosmolapy.Buildings.Generators
             changeWood = 10;
             changeHoney = -2;
         }
-
-        //public override void NextLevel()
-        //{
-        //    level++;
-        //}
-
     }
 }

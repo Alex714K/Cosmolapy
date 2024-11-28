@@ -8,7 +8,7 @@ namespace Cosmolapy.Buildings
 {
     internal abstract class Building : NextMovable
     {
-        protected string name;
+        public string name;
         abstract public void NextMove();
     }
 }

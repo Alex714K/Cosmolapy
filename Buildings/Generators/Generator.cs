@@ -8,20 +8,20 @@ namespace Cosmolapy.Buildings.Generators
 {
     internal abstract class Generator : Building
     {
-        protected int changeHoney;
-        protected int changeWood;
-        protected int level;
+        public float changeHoney;
+        public float changeWood;
+        public int level;
 
         override public void NextMove()
         {
-            Global.mainModel.resources.Honey += changeHoney;
-            Global.mainModel.resources.Wood += changeWood;
+            Global.mainModel.resources.Honey += (int)changeHoney;
+            Global.mainModel.resources.Wood += (int)changeWood;
         }
 
         public virtual void NextLevel()
         {
-            changeHoney = (int)(changeHoney * 1.2f);
-            changeWood = (int)(changeWood * 1.2f);
+            changeHoney *= 1.2f;
+            changeWood *= 1.2f;
             level++;
         }
 
