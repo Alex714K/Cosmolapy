@@ -1,6 +1,5 @@
 using System;
 using System.Net.Http;
-using Cosmolapy.scenes;
 using Cosmolapy.Api.StructuresOfData.JsonFormats;
 using Cosmolapy.Api.StructuresOfData;
 using System.Net.Http.Json;

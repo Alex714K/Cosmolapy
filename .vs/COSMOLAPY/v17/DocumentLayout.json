@@ -1,47 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GitHub\\CSharp\\Cosmolapy\\",
+  "WorkspaceRootPath": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\selectsigninandsignup\\gotosigninbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:selectsigninandsignup\\gotosigninbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\NextMoveButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scenes\\main\\NextMoveButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\scenes\\main\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:scenes\\main\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\signin\\signinbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:signin\\signinbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\scenes\\researches\\cellview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:scenes\\researches\\cellview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\scenes\\resources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:scenes\\resources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\scenes\\main\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:scenes\\main\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\scenes\\researches\\cellsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:scenes\\researches\\cellsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\scenes\\main\\researchbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:scenes\\main\\researchbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\scenes\\researches\\backbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:scenes\\researches\\backbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\scenes\\main\\shopbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:scenes\\main\\shopbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|i:\\.files\\programm\\godot\\cosmolapy\\resources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0372291-370B-497C-A94F-F171764DA9FC}|Cosmolapy.csproj|solutionrelative:resources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,142 +33,77 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GoToSignInButton.cs",
-              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\selectSignInAndSignUp\\GoToSignInButton.cs",
-              "RelativeDocumentMoniker": "selectSignInAndSignUp\\GoToSignInButton.cs",
-              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\selectSignInAndSignUp\\GoToSignInButton.cs",
-              "RelativeToolTip": "selectSignInAndSignUp\\GoToSignInButton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T11:26:35.402Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SignInButton.cs",
-              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\signIn\\SignInButton.cs",
-              "RelativeDocumentMoniker": "signIn\\SignInButton.cs",
-              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\signIn\\SignInButton.cs",
-              "RelativeToolTip": "signIn\\SignInButton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAcAAAA",
+              "Title": "Global.cs",
+              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Global.cs",
+              "RelativeDocumentMoniker": "Global.cs",
+              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\Global.cs",
+              "RelativeToolTip": "Global.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T11:25:56.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CellsViewModel.cs",
-              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\researches\\CellsViewModel.cs",
-              "RelativeDocumentMoniker": "scenes\\researches\\CellsViewModel.cs",
-              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\researches\\CellsViewModel.cs",
-              "RelativeToolTip": "scenes\\researches\\CellsViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T12:42:44.915Z",
+              "WhenOpened": "2024-11-27T11:28:31.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainView.cs",
-              "DocumentMoniker": "D:\\GitHub\\CSharp\\Cosmolapy\\scenes\\main\\MainView.cs",
+              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainView.cs",
               "RelativeDocumentMoniker": "scenes\\main\\MainView.cs",
-              "ToolTip": "D:\\GitHub\\CSharp\\Cosmolapy\\scenes\\main\\MainView.cs",
+              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainView.cs",
               "RelativeToolTip": "scenes\\main\\MainView.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBIAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T12:34:21.975Z",
+              "WhenOpened": "2024-11-27T11:11:59.579Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainModel.cs",
-              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainModel.cs",
-              "RelativeDocumentMoniker": "scenes\\main\\MainModel.cs",
-              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainModel.cs",
-              "RelativeToolTip": "scenes\\main\\MainModel.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAUwA8AAAAlAAAA",
+              "DocumentIndex": 0,
+              "Title": "NextMoveButton.cs",
+              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\NextMoveButton.cs",
+              "RelativeDocumentMoniker": "scenes\\main\\NextMoveButton.cs",
+              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\NextMoveButton.cs",
+              "RelativeToolTip": "scenes\\main\\NextMoveButton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T12:31:40.183Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BackButton.cs",
-              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\researches\\BackButton.cs",
-              "RelativeDocumentMoniker": "scenes\\researches\\BackButton.cs",
-              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\researches\\BackButton.cs",
-              "RelativeToolTip": "scenes\\researches\\BackButton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBEAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T12:14:46.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ResearchButton.cs",
-              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\ResearchButton.cs",
-              "RelativeDocumentMoniker": "scenes\\main\\ResearchButton.cs",
-              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\ResearchButton.cs",
-              "RelativeToolTip": "scenes\\main\\ResearchButton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T12:13:46.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ShopButton.cs",
-              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\ShopButton.cs",
-              "RelativeDocumentMoniker": "scenes\\main\\ShopButton.cs",
-              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\ShopButton.cs",
-              "RelativeToolTip": "scenes\\main\\ShopButton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T12:13:00.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CellView.cs",
-              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\researches\\CellView.cs",
-              "RelativeDocumentMoniker": "scenes\\researches\\CellView.cs",
-              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\researches\\CellView.cs",
-              "RelativeToolTip": "scenes\\researches\\CellView.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAADgvx8AAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T22:00:00.362Z",
+              "WhenOpened": "2024-11-27T11:02:55.8Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Resources.cs",
-              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\Resources.cs",
-              "RelativeDocumentMoniker": "scenes\\Resources.cs",
-              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\Resources.cs",
-              "RelativeToolTip": "scenes\\Resources.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAYwCkAAAAWAAAA",
+              "DocumentMoniker": "I:\\.FILES\\PROGRAMM\\GODOT\\COSMOLAPY\\Resources.cs",
+              "RelativeDocumentMoniker": "Resources.cs",
+              "ToolTip": "I:\\.FILES\\PROGRAMM\\GODOT\\COSMOLAPY\\Resources.cs",
+              "RelativeToolTip": "Resources.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAiwDAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T21:43:16.266Z",
+              "WhenOpened": "2024-11-27T10:56:31.102Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainModel.cs",
+              "DocumentMoniker": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainModel.cs",
+              "RelativeDocumentMoniker": "scenes\\main\\MainModel.cs",
+              "ToolTip": "I:\\.Files\\Programm\\Godot\\CosmoLapy\\scenes\\main\\MainModel.cs",
+              "RelativeToolTip": "scenes\\main\\MainModel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T10:48:42.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             }
           ]
         }
