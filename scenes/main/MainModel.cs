@@ -28,7 +28,7 @@ namespace Cosmolapy.scenes.main
         public MainModel()
         {
             move = 1;
-            resources = new Resources(210, 100);
+            resources = new Resources(210, 100, 100, 100);
 
             mednica = new Mednica();
             sawmill = new Sawmill();

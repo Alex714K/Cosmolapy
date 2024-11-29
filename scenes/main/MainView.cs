@@ -7,8 +7,11 @@ using System.Collections.Generic;
 
 public partial class MainView : Node2D
 {
+	// Resources
 	Label honeyLabel;
 	Label woodLabel;
+	Label ironLabel;
+
 	Label moveLabel;
 
 	GeneratorView sampleGenerator;
@@ -17,8 +20,10 @@ public partial class MainView : Node2D
 
 	public override void _Ready()
 	{
-        honeyLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("Resources/Honey");
-        woodLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("Resources/Wood");
+        honeyLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("Resources/HoneyLabel");
+        woodLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("Resources/WoodLabel");
+        ironLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("Resources/IronLabel");
+
         moveLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("MoveLabel");
         sampleGenerator = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<GeneratorView>("Buildings/SampleGenerator");
 
@@ -28,7 +33,6 @@ public partial class MainView : Node2D
 
 		AddGenerator(Global.mainModel.sawmill, new Vector2(100, 150));
 		AddGenerator(Global.mainModel.mednica, new Vector2(300, 150));
-		//AddGenerator(Global.mainModel.sawmill, new Vector2(0, 0));
     }
 
 	private void AddGenerator(Generator data, Vector2 position)
@@ -40,11 +44,11 @@ public partial class MainView : Node2D
 
 	public override void _Process(double delta)
 	{
-        honeyLabel.Text = "Honey: " + Global.mainModel.resources.Honey.ToString();
-        woodLabel.Text = "Wood: " + Global.mainModel.resources.Wood.ToString();
-		moveLabel.Text = Global.mainModel.Move.ToString();
+		honeyLabel.Text = "Honey: " + Global.mainModel.resources.Honey.ToString();
+		woodLabel.Text = "Wood: " + Global.mainModel.resources.Wood.ToString();
+		ironLabel.Text = "Iron: " + Global.mainModel.resources.Iron.ToString();
 
-        var childrens = GetChildren();
+		moveLabel.Text = Global.mainModel.Move.ToString();
 	}
 
 }

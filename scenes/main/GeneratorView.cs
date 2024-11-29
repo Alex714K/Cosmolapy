@@ -36,9 +36,8 @@ public partial class GeneratorView : Node2D
 
     public override void _Process(double delta)
 	{
-        nameLabel.Text = data.name;
-        changeHoneyLabel.Text = ((int)data.changeHoney).ToString();
-        changeWoodLabel.Text = ((int)data.changeWood).ToString();
-        //GD.Print(Position.ToString() + " " + Visible);
-    }
+		nameLabel.Text = data.name;
+		changeHoneyLabel.Text = ((int)data.changeHoney).ToString();
+		changeWoodLabel.Text = ((int)data.changeWood).ToString();
+	}
 }

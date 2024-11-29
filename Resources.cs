@@ -11,6 +11,8 @@ namespace Cosmolapy
     {
         private int honey;
         private int wood;
+        private int iron;
+        private int bioFuel;
 
         public int Honey
         {
@@ -23,12 +25,10 @@ namespace Cosmolapy
                 return honey;
             }
         }
-
         public int Wood
         {
             set
             {
-
                 wood = value;
             }
             get
@@ -36,17 +36,35 @@ namespace Cosmolapy
                 return wood;
             }
         }
-
-        public Resources()
+        public int Iron
         {
-            Honey = 210;
-            Wood = 20;
+            set
+            {
+                iron = value;
+            }
+            get
+            {
+                return iron;
+            }
+        }
+        public int BioFuel
+        {
+            set
+            {
+                bioFuel = value;
+            }
+            get
+            {
+                return bioFuel;
+            }
         }
 
-        public Resources(int _honey, int _wood)
+        public Resources(int _honey, int _wood, int _iron, int _bioFuel)
         {
             Honey = _honey;
             Wood = _wood;
+            Iron = _iron;
+            BioFuel = _bioFuel;
         }
 
     }

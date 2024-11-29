@@ -15,7 +15,7 @@ grow_vertical = 2
 
 [node name="BotBar" type="ColorRect" parent="."]
 layout_mode = 0
-offset_top = 580.0
+offset_top = 531.0
 offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(0.364706, 0.313726, 0.290196, 1)
@@ -23,9 +23,9 @@ color = Color(0.364706, 0.313726, 0.290196, 1)
 [node name="ResearchButton" type="Button" parent="BotBar"]
 layout_mode = 0
 offset_left = 33.0
-offset_top = 47.0
+offset_top = -60.0
 offset_right = 259.0
-offset_bottom = 97.0
+offset_bottom = -10.0
 theme_override_font_sizes/font_size = 30
 text = "Исследования"
 script = ExtResource("1_eurdq")
@@ -33,9 +33,9 @@ script = ExtResource("1_eurdq")
 [node name="ShopButton" type="Button" parent="BotBar"]
 layout_mode = 0
 offset_left = 361.0
-offset_top = 47.0
+offset_top = -60.0
 offset_right = 587.0
-offset_bottom = 97.0
+offset_bottom = -10.0
 theme_override_font_sizes/font_size = 30
 text = "Магазин
 "
@@ -47,7 +47,7 @@ offset_right = 1280.0
 offset_bottom = 140.0
 color = Color(0.364706, 0.313726, 0.290196, 1)
 
-[node name="Honey" type="Label" parent="Resources"]
+[node name="HoneyLabel" type="Label" parent="Resources"]
 layout_mode = 0
 offset_left = 36.0
 offset_right = 236.0
@@ -56,7 +56,7 @@ theme_override_font_sizes/font_size = 30
 text = "Honey
 "
 
-[node name="Wood" type="Label" parent="Resources"]
+[node name="WoodLabel" type="Label" parent="Resources"]
 layout_mode = 0
 offset_left = 241.0
 offset_right = 404.0
@@ -64,12 +64,19 @@ offset_bottom = 140.0
 theme_override_font_sizes/font_size = 30
 text = "Wood: "
 
+[node name="IronLabel" type="Label" parent="Resources"]
+offset_left = 482.0
+offset_right = 645.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 30
+text = "Iron: "
+
 [node name="NextMoveButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1158.0
-offset_top = 498.0
+offset_top = 449.0
 offset_right = 1278.0
-offset_bottom = 578.0
+offset_bottom = 529.0
 theme_override_font_sizes/font_size = 52
 text = "->"
 script = ExtResource("3_2grc1")
@@ -77,9 +84,9 @@ script = ExtResource("3_2grc1")
 [node name="MoveLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 1178.0
-offset_top = 454.0
+offset_top = 405.0
 offset_right = 1278.0
-offset_bottom = 496.0
+offset_bottom = 447.0
 theme_override_font_sizes/font_size = 30
 text = "1"
 horizontal_alignment = 2
@@ -87,14 +94,14 @@ horizontal_alignment = 2
 [node name="Buildings" type="Node" parent="."]
 
 [node name="SampleGenerator" type="Node2D" parent="Buildings"]
-position = Vector2(-388, 172)
+position = Vector2(-500, 172)
 script = ExtResource("4_0ncui")
 
 [node name="UpgradeButton" type="Button" parent="Buildings/SampleGenerator"]
 offset_left = 34.0
 offset_top = 220.0
 offset_right = 184.0
-offset_bottom = 327.0
+offset_bottom = 300.0
 theme_override_font_sizes/font_size = 28
 text = "Upgrade"
 metadata/_edit_use_anchors_ = true
