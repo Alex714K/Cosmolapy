@@ -71,6 +71,13 @@ offset_bottom = 140.0
 theme_override_font_sizes/font_size = 30
 text = "Iron: "
 
+[node name="BiofuelLabel" type="Label" parent="Resources"]
+offset_left = 709.0
+offset_right = 872.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 30
+text = "BioFuel:"
+
 [node name="NextMoveButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1158.0

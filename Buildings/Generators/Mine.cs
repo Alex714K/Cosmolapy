@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Cosmolapy.Buildings.Generators
 {
-    internal class Mednica : Generator
+    internal class Mine : Generator
     {
-        public Mednica() : base()
+        public Mine() : base()
         {
-            name = "Mednica";
-            changeHoney = 10;
-            changeWood = -2;
+            name = "Шахта";
+
         }
+
     }
 }

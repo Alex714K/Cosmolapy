@@ -11,6 +11,7 @@ public partial class MainView : Node2D
 	Label honeyLabel;
 	Label woodLabel;
 	Label ironLabel;
+	Label biofuelLabel;
 
 	Label moveLabel;
 
@@ -23,6 +24,7 @@ public partial class MainView : Node2D
         honeyLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("Resources/HoneyLabel");
         woodLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("Resources/WoodLabel");
         ironLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("Resources/IronLabel");
+        biofuelLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("Resources/BiofuelLabel");
 
         moveLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("MoveLabel");
         sampleGenerator = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<GeneratorView>("Buildings/SampleGenerator");
@@ -47,6 +49,7 @@ public partial class MainView : Node2D
 		honeyLabel.Text = "Honey: " + Global.mainModel.resources.Honey.ToString();
 		woodLabel.Text = "Wood: " + Global.mainModel.resources.Wood.ToString();
 		ironLabel.Text = "Iron: " + Global.mainModel.resources.Iron.ToString();
+        biofuelLabel.Text = "Biofuel: " + Global.mainModel.resources.BioFuel.ToString();
 
 		moveLabel.Text = Global.mainModel.Move.ToString();
 	}

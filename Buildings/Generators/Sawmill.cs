@@ -8,7 +8,7 @@ namespace Cosmolapy.Buildings.Generators
 {
     internal class Sawmill : Generator
     {
-        public Sawmill()
+        public Sawmill() : base()
         {
             name = "Sawmill";
             changeWood = 10;

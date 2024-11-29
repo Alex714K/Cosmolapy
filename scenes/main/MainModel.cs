@@ -14,8 +14,8 @@ namespace Cosmolapy.scenes.main
         private int move;
         public Resources resources;
         List<NextMovable> movables;
-        public Sawmill sawmill;
-        public Mednica mednica;
+        public Generator sawmill;
+        public Generator mednica;
 
         public int Move
         {
@@ -28,10 +28,10 @@ namespace Cosmolapy.scenes.main
         public MainModel()
         {
             move = 1;
-            resources = new Resources(210, 100, 100, 100);
+            resources = new Resources(100, 100, 100, 100);
 
-            mednica = new Mednica();
-            sawmill = new Sawmill();
+            mednica = new Generator("Мёдница", 100, 0, 0, 0);
+            sawmill = new Generator("Лесопилка", 0, 100, 0, -20);
 
             movables = new List<NextMovable>();
             movables.Add(sawmill);
