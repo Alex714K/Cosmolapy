@@ -17,6 +17,7 @@ namespace Cosmolapy
 
         public static MainModel mainModel;
         public static CellsModel cellsModel;
+
         static Global()
         {
             mainModel = new MainModel();

@@ -35,11 +35,12 @@ public partial class MainView : Node2D
 
 		AddGenerator(Global.mainModel.sawmill, new Vector2(100, 150));
 		AddGenerator(Global.mainModel.mednica, new Vector2(300, 150));
+		AddGenerator(Global.mainModel.laboratory, new Vector2(500, 150));
     }
 
 	private void AddGenerator(Generator data, Vector2 position)
 	{
-        generators.Add((GeneratorView)sampleGenerator.Duplicate());
+        generators.Add((GeneratorView)sampleGenerator.Duplicate());	
         generators[generators.Count - 1].SetData(data, position);
 		AddChild(generators[generators.Count - 1]);
     }

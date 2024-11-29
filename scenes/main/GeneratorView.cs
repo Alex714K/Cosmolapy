@@ -15,12 +15,8 @@ public partial class GeneratorView : Node2D
 	public override void _Ready()
 	{
 		nameLabel = GetNode<Label>("NameLabel");
-		changeHoneyLabel = GetNode<Label>("ChangeHoneyLabel");
-		changeWoodLabel = GetNode<Label>("ChangeWoodLabel");
-		upgradeButton = GetNode<Button>("UpgradeButton");
+		upgradeButton = GetNode<Button>("EnterButton");
 		upgradeButton.Pressed += buttonPressed;
-
-
     }
 
 	internal void SetData(Generator _data, Vector2 position)
@@ -31,13 +27,12 @@ public partial class GeneratorView : Node2D
 
 	private void buttonPressed()
 	{
-		data.NextLevel();
-	}
+        GetTree().ChangeSceneToFile("res://scenes/generatorView/generator_scene.tscn");
+		Global.mainModel.viewGenerator = data;
+    }
 
     public override void _Process(double delta)
 	{
 		nameLabel.Text = data.name;
-		changeHoneyLabel.Text = ((int)data.changeHoney).ToString();
-		changeWoodLabel.Text = ((int)data.changeWood).ToString();
 	}
 }

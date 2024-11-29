@@ -16,6 +16,9 @@ namespace Cosmolapy.scenes.main
         List<NextMovable> movables;
         public Generator sawmill;
         public Generator mednica;
+        public Generator laboratory;
+
+        public Generator viewGenerator;
 
         public int Move
         {
@@ -30,8 +33,9 @@ namespace Cosmolapy.scenes.main
             move = 1;
             resources = new Resources(100, 100, 100, 100);
 
-            mednica = new Generator("Мёдница", 100, 0, 0, 0);
-            sawmill = new Generator("Лесопилка", 0, 100, 0, -20);
+            mednica = new Generator("Mednica", 100, 0, 0, 0);
+            sawmill = new Generator("Sawmill", 0, 100, 0, -20);
+            laboratory = new Generator("Laboratory", 0, -50, 0, 100);
 
             movables = new List<NextMovable>();
             movables.Add(sawmill);
