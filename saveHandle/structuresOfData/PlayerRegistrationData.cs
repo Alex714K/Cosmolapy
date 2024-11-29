@@ -1,7 +1,17 @@
 namespace Cosmolapy.saveHandle.structuresOfData;
 
-public readonly struct PlayerRegistrationData
+public struct PlayerRegistrationData
 {
-    public readonly string name;
-    public readonly string password;
+    public string name;
+    public string password;
+    public PlayerRegistrationData()
+    {
+        name = "";
+        password = "";
+    }
+    public PlayerRegistrationData(string _name, string _password)
+    {
+        name = _name;
+        password = _password;
+    }
 }
