@@ -1,15 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://xb2jqojwku2s"]
 
 [ext_resource type="Script" path="res://scenes/researches/BackButton.cs" id="1_nhvop"]
+[ext_resource type="Texture2D" uid="uid://daqi8v2ffg1jw" path="res://scenes/shop/Gustavo.png" id="1_otihe"]
 [ext_resource type="Script" path="res://scenes/shop/Shop.cs" id="2_fy6yw"]
-[ext_resource type="Texture2D" uid="uid://dqajlaifckmuq" path="res://scenes/shop/Gustavo.jpg" id="2_wa7pg"]
 [ext_resource type="Script" path="res://scenes/shop/HoneyToWoodButton.cs" id="4_44wh5"]
 
 [node name="Shop" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(640, 360)
-texture = ExtResource("2_wa7pg")
+texture = ExtResource("1_otihe")
 
 [node name="Gui" type="Control" parent="."]
 layout_mode = 3
@@ -26,6 +26,7 @@ theme_override_font_sizes/font_size = 25
 script = ExtResource("1_nhvop")
 
 [node name="HoneyLabel" type="Label" parent="Gui"]
+layout_mode = 0
 offset_left = 275.0
 offset_top = 1.0
 offset_right = 395.0
@@ -35,6 +36,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="WoodLabel" type="Label" parent="Gui"]
+layout_mode = 0
 offset_left = 140.0
 offset_right = 260.0
 offset_bottom = 80.0

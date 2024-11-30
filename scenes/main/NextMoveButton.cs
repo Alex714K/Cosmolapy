@@ -15,6 +15,10 @@ public partial class NextMoveButton : Button
 
 	private void buttonPressed()
 	{
-		Global.mainModel.NextMove(); 
+		Global.mainModel.NextMove();
+
+		CardsView cardsView = GetTree().Root.GetNode<CardsView>("Main/Camera/MainGui/Cards");
+		cardsView.Update();
+
 	}
 }

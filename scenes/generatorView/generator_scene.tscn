@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_valce")
 
 [node name="BackButton" type="Button" parent="."]
+layout_mode = 0
 offset_right = 100.0
 offset_bottom = 55.0
 theme_override_font_sizes/font_size = 25

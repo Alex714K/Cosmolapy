@@ -9,9 +9,8 @@
 script = ExtResource("1_k84nt")
 
 [node name="BackGround" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(812, 360)
-scale = Vector2(1.26879, 1.26879)
+position = Vector2(834.194, 305.5)
+scale = Vector2(1.30347, 1.30347)
 texture = ExtResource("3_h3n0h")
 
 [node name="Camera" type="Camera2D" parent="."]

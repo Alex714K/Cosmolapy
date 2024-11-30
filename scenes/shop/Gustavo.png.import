@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqajlaifckmuq"
-path="res://.godot/imported/Gustavo.jpg-fab5aea3206f7d7d2b02627925a918a8.ctex"
+uid="uid://daqi8v2ffg1jw"
+path="res://.godot/imported/Gustavo.png-3f3c5bde2c9e5a255f47141c249469b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/shop/Gustavo.jpg"
-dest_files=["res://.godot/imported/Gustavo.jpg-fab5aea3206f7d7d2b02627925a918a8.ctex"]
+source_file="res://scenes/shop/Gustavo.png"
+dest_files=["res://.godot/imported/Gustavo.png-3f3c5bde2c9e5a255f47141c249469b7.ctex"]
 
 [params]
 

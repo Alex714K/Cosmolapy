@@ -59,7 +59,7 @@ namespace Cosmolapy.Buildings.Generators
             if (progressOfLevel == needProgressOfLevel)
             {
                 NextLevel();
-
+                progressOfLevel = 0;
             }
         }
 
