@@ -33,10 +33,10 @@ public partial class MainView : Node2D
 
 		sampleGenerator.SetData(Global.mainModel.sawmill, new Vector2(-500, 150));
 
-		AddGenerator(Global.mainModel.sawmill, new Vector2(100, 150));
-		AddGenerator(Global.mainModel.mednica, new Vector2(300, 150));
-		AddGenerator(Global.mainModel.laboratory, new Vector2(500, 150));
-		AddGenerator(Global.mainModel.mine, new Vector2(700, 150));
+		AddGenerator(Global.mainModel.generators[Generators.sawmill], new Vector2(100, 150));
+		AddGenerator(Global.mainModel.generators[Generators.mednica], new Vector2(300, 150));
+		AddGenerator(Global.mainModel.generators[Generators.laboratory], new Vector2(500, 150));
+		AddGenerator(Global.mainModel.generators[Generators.mine], new Vector2(700, 150));
     }
 
 	private void AddGenerator(Generator data, Vector2 position)

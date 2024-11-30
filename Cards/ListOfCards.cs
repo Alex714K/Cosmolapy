@@ -12,35 +12,18 @@ namespace Cosmolapy.Cards
         public List<Card> cards;
         List<Card> sampleCards;
 
-        public ListOfCards(List<Generator> generators)
+        public ListOfCards(Dictionary<Generators, Generator> generators)
         {
             cards = new List<Card>();
             sampleCards = new List<Card>();
-            for (int i = 0; i < generators.Count; i++)
+            foreach (var generator in generators)
             {
                 sampleCards.Add(new UpgradeBuildingCard(
-                    "Upgrade\n" + generators[i].name,
+                    "Upgrade\n" + generator.Value.name,
                     0, 100, 100, 100,
-                    generators[i].PlusProgress
+                    generator.Value.PlusProgress
                     ));
             }
-
-            //sampleCards.Add(new UpgradeBuildingCard(
-            //    "Upgrade\n" + generators[0].name,
-            //    0, 100, 100, 100,
-            //    generators[0].PlusProgress
-            //    ));
-
-            //sampleCards.Add(new UpgradeBuildingCard(
-            //    "Upgrade\n" + generators[0].name,
-            //    0, 100, 100, 100,
-            //    generators[0].PlusProgress
-            //    ));
-            //sampleCards.Add(new UpgradeBuildingCard(
-            //    "Upgrade\n" + generators[0].name,
-            //    0, 100, 100, 100,
-            //    Global.mainModel.mine.PlusProgress
-            //    ));
             Update();
         }
 
