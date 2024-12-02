@@ -1,5 +1,7 @@
 using Godot;
 using System;
+using Cosmolapy.saveHandle;
+using Cosmolapy.saveHandle.structuresOfData;
 
 public partial class SignUpButton : Button
 {
@@ -19,6 +21,9 @@ public partial class SignUpButton : Button
 
     public void buttonPressed()
     {
-        GetTree().ChangeSceneToFile("res://scenes/selectSignInAndSignUp/select_sig_in_or_sign_up.tscn");
+        if (SaveHandler.RegisterPlayer(new PlayerRegistrationData(
+            loginTextEdit.Text, passwordTextEdit.Text
+            )))
+            GetTree().ChangeSceneToFile("res://scenes/main/main.tscn");
     }
 }
