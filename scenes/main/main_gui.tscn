@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://esiratcjljl"]
+[gd_scene load_steps=8 format=3 uid="uid://esiratcjljl"]
 
 [ext_resource type="Script" path="res://scenes/main/ResearchButton.cs" id="1_eurdq"]
 [ext_resource type="Script" path="res://scenes/main/ShopButton.cs" id="2_be2ud"]
 [ext_resource type="Script" path="res://scenes/main/NextMoveButton.cs" id="3_2grc1"]
 [ext_resource type="Script" path="res://scenes/main/GeneratorView.cs" id="4_0ncui"]
 [ext_resource type="Script" path="res://scenes/main/CardsView.cs" id="5_1hijo"]
+[ext_resource type="Script" path="res://scenes/main/RocketButton.cs" id="5_cskpr"]
 [ext_resource type="Script" path="res://scenes/main/CardView.cs" id="6_8h62j"]
 
 [node name="MainGui" type="Control"]
@@ -137,7 +138,7 @@ offset_right = 800.0
 offset_bottom = 520.0
 theme_override_font_sizes/font_size = 30
 text = "Rocket:"
-script = ExtResource("2_be2ud")
+script = ExtResource("5_cskpr")
 
 [node name="Cards" type="Control" parent="."]
 anchors_preset = 0
