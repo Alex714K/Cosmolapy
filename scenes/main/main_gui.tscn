@@ -165,6 +165,7 @@ offset_bottom = 23.0
 text = "Update Mednica"
 
 [node name="HoneyPriceLabel" type="Label" parent="Cards/SampleCard"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 70.0
 offset_right = 120.0
@@ -173,6 +174,7 @@ text = "Honey: "
 vertical_alignment = 1
 
 [node name="WoodPriceLabel" type="Label" parent="Cards/SampleCard"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 100.0
 offset_right = 120.0
@@ -181,6 +183,7 @@ text = "Wood: "
 vertical_alignment = 1
 
 [node name="IronPriceLabel" type="Label" parent="Cards/SampleCard"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 130.0
 offset_right = 120.0
@@ -189,6 +192,7 @@ text = "Irod:"
 vertical_alignment = 1
 
 [node name="BiofuelPriceLabel" type="Label" parent="Cards/SampleCard"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 160.0
 offset_right = 120.0

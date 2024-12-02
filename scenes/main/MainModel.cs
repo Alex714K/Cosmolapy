@@ -44,7 +44,7 @@ namespace Cosmolapy.scenes.main
             resources = new Resources(100, 100, 100, 100);
 
             generators = new Dictionary<Generators, Generator>();
-            generators[Generators.mednica] = new Generator("Mednica", 100, 0, 0, 0;
+            generators[Generators.mednica] = new Generator("Mednica", 100, 0, 0, 0);
             generators[Generators.sawmill] = new Generator("Sawmill", 0, 100, 0, -20);
             generators[Generators.laboratory] = new Generator("Laboratory", 0, -50, 0, 100);
             generators[Generators.mine] = new Generator("Mine", 0, 0, 100, -20);

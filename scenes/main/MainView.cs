@@ -31,7 +31,7 @@ public partial class MainView : Node2D
 
 		generators = new List<GeneratorView>();
 
-		sampleGenerator.SetData(Global.mainModel.sawmill, new Vector2(-500, 150));
+		sampleGenerator.SetData(Global.mainModel.generators[Generators.sawmill], new Vector2(-500, 150));
 
 		AddGenerator(Global.mainModel.generators[Generators.sawmill], new Vector2(100, 150));
 		AddGenerator(Global.mainModel.generators[Generators.mednica], new Vector2(300, 150));
