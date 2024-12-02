@@ -24,6 +24,11 @@ namespace Cosmolapy.Cards
                     generator.Value.PlusProgress
                     ));
             }
+
+            sampleCards.Add(new RocketCard(
+                "Upgrade\nRocket", 100, 200, 200, 200
+                ));
+
             Update();
         }
 

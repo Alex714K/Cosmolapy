@@ -137,7 +137,7 @@ offset_top = 470.0
 offset_right = 800.0
 offset_bottom = 520.0
 theme_override_font_sizes/font_size = 30
-text = "Rocket:"
+text = "Rocket"
 script = ExtResource("5_cskpr")
 
 [node name="Cards" type="Control" parent="."]

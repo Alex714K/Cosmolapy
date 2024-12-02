@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bf476v5fdtf0"]
+[gd_scene load_steps=3 format=3 uid="uid://bf476v5fdtf0"]
 
 [ext_resource type="Script" path="res://scenes/researches/BackButton.cs" id="1_wuemf"]
+[ext_resource type="Script" path="res://scenes/rocket/ProgressLabel.cs" id="2_tn72b"]
 
 [node name="Rocket" type="Control"]
 layout_mode = 3
@@ -16,3 +17,13 @@ offset_bottom = 55.0
 theme_override_font_sizes/font_size = 25
 text = "Назад"
 script = ExtResource("1_wuemf")
+
+[node name="ProgressLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 583.0
+offset_top = 48.0
+offset_right = 725.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 30
+text = "Progress:  "
+script = ExtResource("2_tn72b")

@@ -20,6 +20,7 @@ namespace Cosmolapy.scenes.main
 {
     internal class MainModel
     {
+        public Rocket rocket;
         private int move;
         public Resources resources;
         List<NextMovable> movables;
@@ -40,6 +41,7 @@ namespace Cosmolapy.scenes.main
 
         public MainModel()
         {
+            rocket = new Rocket();
             move = 1;
             resources = new Resources(100, 100, 100, 100);
 
