@@ -7,29 +7,23 @@ using System.Collections.Generic;
 
 public partial class MainView : Node2D
 {
-	// Resources
-	Label honeyLabel;
-	Label woodLabel;
-	Label ironLabel;
-	Label biofuelLabel;
-
-	Label moveLabel;
-
 	GeneratorView sampleGenerator;
 
 	List<GeneratorView> generators;
 
+	bool alreadyShowPopup;
+
+	Popup winPopup;
+
 	public override void _Ready()
 	{
-        honeyLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("Resources/HoneyLabel");
-        woodLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("Resources/WoodLabel");
-        ironLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("Resources/IronLabel");
-        biofuelLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("Resources/BiofuelLabel");
 
-        moveLabel = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<Label>("MoveLabel");
-        sampleGenerator = GetTree().Root.GetNode("Main/Camera/MainGui").GetNode<GeneratorView>("Buildings/SampleGenerator");
+        sampleGenerator = GetNode("Camera/MainGui").GetNode<GeneratorView>("Buildings/SampleGenerator");
 
-		generators = new List<GeneratorView>();
+        winPopup = GetNode("Camera/MainGui").GetNode<Popup>("WinPopupMenu");
+		alreadyShowPopup = false;
+
+        generators = new List<GeneratorView>();
 
 		sampleGenerator.SetData(Global.mainModel.generators[Generators.sawmill], new Vector2(-500, 150));
 
@@ -48,12 +42,12 @@ public partial class MainView : Node2D
 
 	public override void _Process(double delta)
 	{
-		honeyLabel.Text = "Honey: " + Global.mainModel.resources.Honey.ToString();
-		woodLabel.Text = "Wood: " + Global.mainModel.resources.Wood.ToString();
-		ironLabel.Text = "Iron: " + Global.mainModel.resources.Iron.ToString();
-        biofuelLabel.Text = "Biofuel: " + Global.mainModel.resources.BioFuel.ToString();
 
-		moveLabel.Text = Global.mainModel.Move.ToString();
+		if (Global.mainModel.rocket.Progress >= Global.mainModel.rocket.NeedProgress && !alreadyShowPopup)
+		{
+			winPopup.Popup();
+			alreadyShowPopup = true;
+		}
 	}
 
 }

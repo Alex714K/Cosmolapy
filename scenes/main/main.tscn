@@ -2,21 +2,38 @@
 
 [ext_resource type="PackedScene" uid="uid://esiratcjljl" path="res://scenes/main/main_gui.tscn" id="1_k11yt"]
 [ext_resource type="Script" path="res://scenes/main/MainView.cs" id="1_k84nt"]
-[ext_resource type="Texture2D" uid="uid://der6c745bvit3" path="res://scenes/main/Background.jpg" id="3_h3n0h"]
-[ext_resource type="Script" path="res://scenes/main/Camera.cs" id="4_jwo7n"]
+[ext_resource type="Texture2D" uid="uid://cu0ig6d24aspy" path="res://scenes/main/Background.png" id="2_dbc0x"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_4lvma"]
+script/source = "using Godot;
+using System;
+
+public partial class Camera : Camera2D
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_k84nt")
 
 [node name="BackGround" type="Sprite2D" parent="."]
-position = Vector2(834.194, 305.5)
-scale = Vector2(1.30347, 1.30347)
-texture = ExtResource("3_h3n0h")
+position = Vector2(825.66, 307.151)
+scale = Vector2(0.645938, 0.645938)
+texture = ExtResource("2_dbc0x")
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(6.10352e-05, 0)
 offset = Vector2(640, 360)
-script = ExtResource("4_jwo7n")
+script = SubResource("CSharpScript_4lvma")
 
 [node name="MainGui" parent="Camera" instance=ExtResource("1_k11yt")]
 offset_left = -6.10352e-05
