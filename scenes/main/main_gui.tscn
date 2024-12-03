@@ -1,16 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://esiratcjljl"]
+[gd_scene load_steps=13 format=3 uid="uid://esiratcjljl"]
 
-[ext_resource type="Script" path="res://scenes/main/Labels/HoneyLabel.cs" id="1_ca350"]
+[ext_resource type="Script" path="res://scenes/main/Resources/HoneyLabel.cs" id="1_ca350"]
 [ext_resource type="Script" path="res://scenes/main/ResearchButton.cs" id="1_eurdq"]
-[ext_resource type="Script" path="res://scenes/main/Labels/WoodLabel.cs" id="2_8fc3f"]
+[ext_resource type="Script" path="res://scenes/main/Resources/WoodLabel.cs" id="2_8fc3f"]
 [ext_resource type="Script" path="res://scenes/main/ShopButton.cs" id="2_be2ud"]
-[ext_resource type="Script" path="res://scenes/main/Labels/MoveLabel.cs" id="2_fedm5"]
+[ext_resource type="Script" path="res://scenes/main/Resources/MoveLabel.cs" id="2_fedm5"]
 [ext_resource type="Script" path="res://scenes/main/NextMoveButton.cs" id="3_2grc1"]
-[ext_resource type="Script" path="res://scenes/main/Labels/IronLabel.cs" id="3_cr03a"]
+[ext_resource type="Script" path="res://scenes/main/Resources/IronLabel.cs" id="3_cr03a"]
 [ext_resource type="Script" path="res://scenes/main/GeneratorView.cs" id="4_0ncui"]
 [ext_resource type="Script" path="res://scenes/main/CardsView.cs" id="5_1hijo"]
 [ext_resource type="Script" path="res://scenes/main/RocketButton.cs" id="5_cskpr"]
 [ext_resource type="Script" path="res://scenes/main/CardView.cs" id="6_8h62j"]
+[ext_resource type="Script" path="res://scenes/main/WinPopupMenu.cs" id="12_w2pf6"]
 
 [node name="MainGui" type="Control"]
 layout_mode = 3
@@ -209,11 +210,10 @@ offset_bottom = 183.0
 text = "Biofuel: "
 vertical_alignment = 1
 
-[node name="WinPopup" type="Popup" parent="."]
-
 [node name="WinPopupMenu" type="PopupMenu" parent="."]
 position = Vector2i(540, 200)
 size = Vector2i(200, 300)
+script = ExtResource("12_w2pf6")
 
 [node name="WinPopupMenu" type="Label" parent="WinPopupMenu"]
 offset_right = 40.0

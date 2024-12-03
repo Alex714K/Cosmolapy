@@ -11,11 +11,11 @@ public partial class Camera : Camera2D
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
-        if (Input.IsActionPressed("right") && Position.X < 343)
+        if (Input.IsActionPressed("right") && Position.X < 343 + 640)
         {
             Position += new Vector2(4, 0);
         }
-        if (Input.IsActionPressed("left") && Position.X > 1)
+        if (Input.IsActionPressed("left") && Position.X > 1 + 640)
         {
             Position += new Vector2(-4, 0);
         }

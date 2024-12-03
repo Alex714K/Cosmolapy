@@ -14,7 +14,7 @@ namespace Cosmolapy
         public Rocket()
         {
             progress = 0;
-            needProgress = 10;
+            needProgress = 2;
         }
 
         public int Progress
