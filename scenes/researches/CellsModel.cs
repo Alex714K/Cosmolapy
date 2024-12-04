@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cosmolapy.Cards;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,36 +7,33 @@ using System.Threading.Tasks;
 
 namespace Cosmolapy.scenes.researches
 {
+    enum Reseraches
+    {
+        Cards,
+        Cheap
+    }
+
     internal class CellsModel
     {
-        //public List<Cell> cells;
-        public Dictionary<string, Cell> cells;
+        public Dictionary<Reseraches, Cell> cells;
+
+        private void CheapCards()
+        {
+            foreach (Card card in Global.mainModel.cardModels.sampleCards)
+            {
+                card.Cheap();
+            }
+        }
 
         public CellsModel()
         {
-            cells = new Dictionary<string, Cell>();
-            cells["Rocket"] = new Cell("Rocket", 100, true);
-            
-            cells["Rocket"].children.Add(new Cell("Rocket1", 50, false));
-            cells["Rocket"].children[0].children.Add(new Cell("Rocket2", 50, false));
-            cells["Rocket"].children.Add(new Cell("Launcher1", 50, false));
-            cells["Rocket"].children[1].children.Add(new Cell("Launcher2", 50, false));
+            cells = new Dictionary<Reseraches, Cell>();
+            cells[Reseraches.Cards] = new Cell("3 Cards", 200, true, () => Global.mainModel.cardModels.quantityCards = 3);
+            cells[Reseraches.Cards].children.Add(new Cell("4 Cards", 100, false, () => Global.mainModel.cardModels.quantityCards = 4));
+            cells[Reseraches.Cards].children[0].children.Add(new Cell("5 Cards", 100, false, () => Global.mainModel.cardModels.quantityCards = 5));
 
-            cells["BioFuel"] = new Cell("BioFuel", 100, true);
-            cells["BioFuel"].children.Add(new Cell("BioFuel1", 50, false));
-
-
-            //cells[0].children[1].children.Add(new Cell("Child01", 50));
-            //cells[0].children[2].children.Add(new Cell("Child02", 50));
-
-            //cells[1].children.Add(new Cell("Child21", 50));
-            //cells[1].children.Add(new Cell("Child22", 50));
-            //cells[1].children[0].children.Add(new Cell("Child21", 50));
-            //cells[1].children[0].children.Add(new Cell("Child21", 50));
-            //cells.Add(new Cell("Aaaa", 50));
+            cells[Reseraches.Cheap] = new Cell("Cheap cards", 200, true, CheapCards);
+            cells[Reseraches.Cheap].children.Add(new Cell("Cheap cards 2", 200, false, CheapCards));
         }
-
-
-
     }
 }

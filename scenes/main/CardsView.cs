@@ -6,13 +6,11 @@ using System.Collections.Generic;
 
 public partial class CardsView : Control
 {
-	//ListOfCards cardModels;
 	List<CardView> cardViewes;
 	CardView sampleCardView;
 
 	public override void _Ready()
 	{
-        //cardModels = new ListOfCards();
         cardViewes = new List<CardView>();
         sampleCardView = GetNode<CardView>("SampleCard");
 		sampleCardView.SetData(Global.mainModel.cardModels.cards[0]);

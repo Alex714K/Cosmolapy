@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://esiratcjljl"]
+[gd_scene load_steps=14 format=3 uid="uid://esiratcjljl"]
 
 [ext_resource type="Script" path="res://scenes/main/Resources/HoneyLabel.cs" id="1_ca350"]
 [ext_resource type="Script" path="res://scenes/main/ResearchButton.cs" id="1_eurdq"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scenes/main/NextMoveButton.cs" id="3_2grc1"]
 [ext_resource type="Script" path="res://scenes/main/Resources/IronLabel.cs" id="3_cr03a"]
 [ext_resource type="Script" path="res://scenes/main/GeneratorView.cs" id="4_0ncui"]
+[ext_resource type="Script" path="res://scenes/main/BiofuelLabel.cs" id="4_nioho"]
 [ext_resource type="Script" path="res://scenes/main/CardsView.cs" id="5_1hijo"]
 [ext_resource type="Script" path="res://scenes/main/RocketButton.cs" id="5_cskpr"]
 [ext_resource type="Script" path="res://scenes/main/CardView.cs" id="6_8h62j"]
@@ -73,6 +74,7 @@ offset_bottom = 80.0
 theme_override_font_sizes/font_size = 30
 text = "BioFuel:"
 vertical_alignment = 1
+script = ExtResource("4_nioho")
 
 [node name="NextMoveButton" type="Button" parent="."]
 layout_mode = 0

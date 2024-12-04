@@ -10,10 +10,14 @@ namespace Cosmolapy.Cards
     internal class ListOfCards
     {
         public List<Card> cards;
-        List<Card> sampleCards;
+        public List<Card> sampleCards;
+
+        public int quantityCards;
 
         public ListOfCards(Dictionary<Generators, Generator> generators)
         {
+            quantityCards = 2;
+
             cards = new List<Card>();
             sampleCards = new List<Card>();
             foreach (var generator in generators)
@@ -36,7 +40,7 @@ namespace Cosmolapy.Cards
         {
             Random random = new Random();
             cards.Clear();
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < quantityCards; i++)
             {
                 cards.Add(sampleCards[random.Next(0, sampleCards.Count)]);
             }

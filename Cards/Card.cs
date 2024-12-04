@@ -44,6 +44,14 @@ namespace Cosmolapy.Cards
             biofuelPrice = _biofuelPrice;
         } 
 
+        public void Cheap()
+        {
+            honeyPrice = (int)(honeyPrice * 0.9);
+            woodPrice = (int)(woodPrice * 0.9);
+            ironPrice = (int)(ironPrice * 0.9);
+            biofuelPrice = (int)(biofuelPrice * 0.9);
+        }
+
         public virtual bool Use()
         {
             if (Global.mainModel.resources.Honey >= honeyPrice &&

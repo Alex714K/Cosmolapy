@@ -36,12 +36,18 @@ public partial class CellsView : Node
         AddChild(viewCells[viewCells.Count - 1]);
     }
 
-    private void FillCells(Dictionary<string, Cell> modelCells)
+    private void FillCells(Dictionary<Reseraches, Cell> modelCells)
     {
-        AddCell(modelCells["Rocket"], new Vector2(120, 100));
-        AddCell(modelCells["Rocket"].children[0], new Vector2(120 - 60, 200));
-        AddCell(modelCells["Rocket"].children[0].children[0], new Vector2(120 - 60, 300));
-        AddCell(modelCells["Rocket"].children[1], new Vector2(120 + 60, 200));
-        AddCell(modelCells["Rocket"].children[1].children[0], new Vector2(120 + 60, 300));
+        AddCell(modelCells[Reseraches.Cards], new Vector2(120, 100));
+        AddCell(modelCells[Reseraches.Cards].children[0], new Vector2(120, 200));
+        AddCell(modelCells[Reseraches.Cards].children[0].children[0], new Vector2(120, 300));
+
+        AddCell(modelCells[Reseraches.Cheap], new Vector2(300, 100));
+        AddCell(modelCells[Reseraches.Cheap].children[0], new Vector2(300, 200));
+
+        //AddCell(modelCells["Rocket"].children[0], new Vector2(120 - 60, 200));
+        //AddCell(modelCells["Rocket"].children[0].children[0], new Vector2(120 - 60, 300));
+        //AddCell(modelCells["Rocket"].children[1], new Vector2(120 + 60, 200));
+        //AddCell(modelCells["Rocket"].children[1].children[0], new Vector2(120 + 60, 300));
     }
 }
