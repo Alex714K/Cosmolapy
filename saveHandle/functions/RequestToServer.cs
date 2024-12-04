@@ -40,7 +40,7 @@ public static class RequestToServer
 
 			var response = client.GetAsync(uri).Result;
 
-			JsonPlayerData playerData = response.Content.ReadFromJsonAsync<JsonPlayerData>().Result;
+			JsonGetResourcesData playerData = response.Content.ReadFromJsonAsync<JsonGetResourcesData>().Result;
 
 			LoadDataInGlobal(playerData.resources);
 			LoadDataInGlobal(new Dictionary<string, string>(){ 
@@ -59,14 +59,14 @@ public static class RequestToServer
 	{
 		using (var client = new HttpClient())
 		{
-			List<JsonPlayerData> listOfPlayers = GetPlayerList();
+			List<JsonGetResourcesData> listOfPlayers = GetPlayerList();
 			if (IsPlayerInList(playerRegistrationData.name, listOfPlayers)) return false;
 
 			string gameUUID = Global.gameUUID;
 
 			Uri uri= new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/players/");
 
-			JsonPlayerData jsonPlayer = new JsonPlayerData()
+			JsonGetResourcesData jsonPlayer = new JsonGetResourcesData()
 			{
 				name = playerRegistrationData.name,
 				resources = new Dictionary<string, string> ()
@@ -87,7 +87,7 @@ public static class RequestToServer
 	{
 		using (var client = new HttpClient())
 		{
-			List<JsonPlayerData> listOfPlayers = GetPlayerList();
+			List<JsonGetResourcesData> listOfPlayers = GetPlayerList();
 			if (!IsPlayerInListAndWithRightPassword(playerRegistrationData, listOfPlayers)) return false;
 
 			string gameUUID = Global.gameUUID;
@@ -103,7 +103,7 @@ public static class RequestToServer
 
 	public static bool Auth(PlayerRegistrationData playerRegistrationData)
 	{
-		List<JsonPlayerData> listOfPlayers = GetPlayerList();
+		List<JsonGetResourcesData> listOfPlayers = GetPlayerList();
 
 		if (IsPlayerInListAndWithRightPassword(playerRegistrationData, listOfPlayers)) 
 			return true;
@@ -181,7 +181,7 @@ public static class RequestToServer
 		}
 	}
 
-	private static List<JsonPlayerData> GetPlayerList()
+	private static List<JsonGetResourcesData> GetPlayerList()
 	{
 		using (var client = new HttpClient())
 		{
@@ -189,16 +189,16 @@ public static class RequestToServer
 
 			Uri uri = new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/players/");
 
-			List<JsonPlayerData> listOfPlayers = client.GetFromJsonAsync<List<JsonPlayerData>>(uri).Result;
+			List<JsonGetResourcesData> listOfPlayers = client.GetFromJsonAsync<List<JsonGetResourcesData>>(uri).Result;
 
 			return listOfPlayers;
 		}
 	}
 
-	private static bool IsPlayerInListAndWithRightPassword(PlayerRegistrationData playerRegistrationData, List<JsonPlayerData> registrations)
+	private static bool IsPlayerInListAndWithRightPassword(PlayerRegistrationData playerRegistrationData, List<JsonGetResourcesData> registrations)
 	{
 		bool flag = false;
-		foreach (JsonPlayerData item in registrations)
+		foreach (JsonGetResourcesData item in registrations)
 		{
 			if (playerRegistrationData.name == item.name)
 			{
@@ -212,10 +212,10 @@ public static class RequestToServer
 		return flag;
 	}
 
-	private static bool IsPlayerInList(string name, List<JsonPlayerData> registrations)
+	private static bool IsPlayerInList(string name, List<JsonGetResourcesData> registrations)
 	{
 		bool flag = false;
-		foreach (JsonPlayerData item in registrations)
+		foreach (JsonGetResourcesData item in registrations)
 		{
 			if (name == item.name)
 			{
