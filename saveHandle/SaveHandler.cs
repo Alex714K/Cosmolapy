@@ -6,19 +6,62 @@ namespace Cosmolapy.saveHandle;
 
 public static class SaveHandler
 {
-    public static void UpdateResources(List<DataForServer> resources)
+    public static void SaveData()
     {
-        RequestToDataBase.GetDataFromTable();
-        RequestToServer.UpdateResources();
+        RequestToServer.SaveData();
+        RequestToDataBase.SaveData();
+    }
+
+    public static void LoadData()
+    {
+        RequestToDataBase.LoadData();
+        RequestToServer.LoadData();
+    }
+
+    public static bool Auth(PlayerRegistrationData playerRegistrationData)
+    {
+        if (RequestToServer.Auth(playerRegistrationData))
+        {
+            if (Global.playerRegistrationData.name == playerRegistrationData.name && 
+                Global.playerRegistrationData.password == playerRegistrationData.password) 
+                return true;
+            
+            Global.playerRegistrationData = playerRegistrationData;
+            RequestToDataBase.SaveData();
+            return true;
+        }
+        else 
+        {
+            if (Global.playerRegistrationData.name == playerRegistrationData.name && 
+                Global.playerRegistrationData.password == playerRegistrationData.password) 
+                return true;
+            else 
+                return false;
+        }
     }
 
     public static bool RegisterPlayer(PlayerRegistrationData playerRegistrationData)
     {
-        return RequestToServer.RegisterPlayer(playerRegistrationData);
+        RequestToDataBase.CreateTable();
+        if (RequestToServer.RegisterPlayer(playerRegistrationData))
+        {
+            Global.playerRegistrationData = playerRegistrationData;
+            RequestToDataBase.SaveData();
+            return true;
+        }
+
+        return false;
     }
 
     public static bool UnregisterPlayer(PlayerRegistrationData playerRegistrationData)
     {
-        return RequestToServer.UnregisterPlayer(playerRegistrationData);
+        if (RequestToServer.UnregisterPlayer(playerRegistrationData))
+        {
+            Global.playerRegistrationData = new PlayerRegistrationData();
+            RequestToDataBase.DeleteDataFromTable();
+            return true;
+        }
+
+        return false;
     }
 }

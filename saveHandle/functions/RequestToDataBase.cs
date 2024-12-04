@@ -3,16 +3,94 @@ using Microsoft.Data.Sqlite;
 using Cosmolapy.saveHandle.structuresOfData;
 using Cosmolapy.saveHandle.cryption;
 using System.Collections.Generic;
-using Godot;
+using System.Collections.ObjectModel;
 
 namespace Cosmolapy.saveHandle.functions;
 
 public static class RequestToDataBase
 {
-    // public static void SaveData(Dictionary<DataType, string> data)
+    public static void LoadData()
+    {
+        Dictionary<DataType, string> dataTable = GetDataFromTable();
+
+        LoadDataInGlobal(dataTable);
+    }
+
     public static void SaveData()
     {
+        Dictionary<DataType, string> dataTable = GetDataFromTable();
+        Dictionary<DataType, string> dataGlobal = CreateDataFromGlobal();
         
+        if (IsTypesInTableGood(dataGlobal, dataTable))
+        {
+            UpdateDataInTable(dataGlobal);
+        }
+        else
+        {
+            DeleteDataFromTable(GetTypesFromTable());
+            InsertDataInTable(dataGlobal);
+        }
+    }
+
+    // public static void DeleteData()
+    // {
+    //     DeleteDataFromTable();
+    // }
+
+    private static void LoadDataInGlobal(Dictionary<DataType, string> dataTable)
+    {
+        foreach (DataType key in dataTable.Keys)
+        {
+            switch (key)
+            {
+                case DataType.Wood:
+                    Global.mainModel.resources.Wood = Convert.ToInt32(dataTable[key]);
+                    break;
+                case DataType.Iron:
+                    Global.mainModel.resources.Iron = Convert.ToInt32(dataTable[key]);
+                    break;
+                case DataType.BioFuel:
+                    Global.mainModel.resources.BioFuel = Convert.ToInt32(dataTable[key]);
+                    break;
+                case DataType.Honey:
+                    Global.mainModel.resources.Honey = Convert.ToInt32(dataTable[key]);
+                    break;
+                case DataType.Name:
+                    Global.playerRegistrationData.name = dataTable[key];
+                    break;
+                case DataType.Password:
+                    Global.playerRegistrationData.password = dataTable[key];
+                    break;
+            }
+        }
+    }
+
+    private static Dictionary<DataType, string> CreateDataFromGlobal()
+    {
+        Dictionary<DataType, string> data = new Dictionary<DataType, string>()
+        {
+            { DataType.Wood, Global.mainModel.resources.Wood.ToString() },
+            { DataType.Iron, Global.mainModel.resources.Iron.ToString() },
+            { DataType.BioFuel, Global.mainModel.resources.BioFuel.ToString() },
+            { DataType.Honey, Global.mainModel.resources.Honey.ToString() },
+            { DataType.Name, Global.playerRegistrationData.name },
+            { DataType.Password, Global.playerRegistrationData.password },
+
+        };
+        return data;
+    }
+
+    private static bool IsTypesInTableGood(Dictionary<DataType, string> dataGlobal, Dictionary<DataType, string> dataTable) 
+    {
+        foreach (DataType type in dataGlobal.Keys)
+        {
+            if (!dataTable.ContainsKey(type))
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private static int UpdateDataInTable(Dictionary<DataType, string> data)
@@ -57,7 +135,36 @@ public static class RequestToDataBase
         return numberOfInserted;
     }
 
-    public static Dictionary<DataType, string> GetDataFromTable()
+    private static List<DataType> GetTypesFromTable()
+    {
+        List<DataType> data = new List<DataType>();
+        using (SqliteConnection connection = new SqliteConnection("DataSource=saveHandle/data/Data.db"))
+        {
+            connection.Open();
+
+            SqliteCommand command = connection.CreateCommand();
+
+            command.Connection = connection;
+            command.CommandText = "SELECT Type FROM DataTable";
+
+            using (SqliteDataReader reader = command.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string type = reader.GetString(0);
+                        
+                        data.Add((DataType)Enum.Parse(typeof(DataType), type));
+                    }
+                    return data;
+                }
+            }
+        }
+        return data;
+    }
+
+    private static Dictionary<DataType, string> GetDataFromTable()
     {
         Dictionary<DataType, string> data = new Dictionary<DataType, string>();
         using (SqliteConnection connection = new SqliteConnection("DataSource=saveHandle/data/Data.db"))
@@ -76,11 +183,11 @@ public static class RequestToDataBase
                     while (reader.Read())
                     {
                         string type = reader.GetString(0);
-                        string TypeInfo = reader.GetString(1);
+                        string typeInfo = reader.GetString(1);
 
                         try 
                         {
-                            data[(DataType)Enum.Parse(typeof(DataType), type)] = TypeInfo;
+                            data[(DataType)Enum.Parse(typeof(DataType), type)] = typeInfo;
                         }
                         catch (ArgumentException _ex)
                         {
@@ -101,7 +208,7 @@ public static class RequestToDataBase
     /// </summary>
     /// <param name="listofTypes"></param>
     /// <returns>Dictionary with keys you entered</returns>
-    public static Dictionary<DataType, string> GetDataFromTable(List<DataType> keys)
+    private static Dictionary<DataType, string> GetDataFromTable(List<DataType> keys)
     {
         Dictionary<DataType, string> data = new Dictionary<DataType, string>();
         using (SqliteConnection connection = new SqliteConnection("DataSource=saveHandle/data/Data.db"))
@@ -133,7 +240,7 @@ public static class RequestToDataBase
         return data;
     }
 
-    public static Dictionary<DataType, string> GetDataFromTable(DataType getType)
+    private static Dictionary<DataType, string> GetDataFromTable(DataType getType)
     {
         Dictionary<DataType, string> data = new Dictionary<DataType, string>();
         using (SqliteConnection connection = new SqliteConnection("DataSource=saveHandle/data/Data.db"))
@@ -143,7 +250,7 @@ public static class RequestToDataBase
             SqliteCommand command = connection.CreateCommand();
 
             command.Connection = connection;
-            command.CommandText = "SELECT * FROM DataTable";
+            command.CommandText = $"SELECT * FROM DataTable WHERE Type='{getType}'";
 
             using (SqliteDataReader reader = command.ExecuteReader())
             {
@@ -180,7 +287,27 @@ public static class RequestToDataBase
         }
     }
 
-    public static int DeleteDataFromTable(List<DataType> data)
+    /// <summary>
+    /// Deletes all data from db. Use with understanding of what you doing
+    /// </summary>
+    /// <returns></returns>
+    public static int DeleteDataFromTable()
+    {
+        using (SqliteConnection connection = new SqliteConnection("DataSource=saveHandle/data/Data.db"))
+        {
+            connection.Open();
+
+            SqliteCommand command = connection.CreateCommand();
+
+            command.Connection = connection;
+
+            command.CommandText = $"DELETE FROM DataTable";
+
+            return command.ExecuteNonQuery();
+        }
+    }
+
+    private static int DeleteDataFromTable(List<DataType> data)
     {
         int numberOfDeleted = 0;
         using (SqliteConnection connection = new SqliteConnection("DataSource=saveHandle/data/Data.db"))
@@ -201,7 +328,7 @@ public static class RequestToDataBase
         return numberOfDeleted;
     }
 
-    public static int DeleteDataFromTable(DataType data)
+    private static int DeleteDataFromTable(DataType data)
     {
         using (SqliteConnection connection = new SqliteConnection("DataSource=saveHandle/data/Data.db"))
         {
@@ -217,7 +344,7 @@ public static class RequestToDataBase
         }
     }
 
-    public static int DeleteDataFromTable(string data)
+    private static int DeleteDataFromTable(string data)
     {
         using (SqliteConnection connection = new SqliteConnection("DataSource=saveHandle/data/Data.db"))
         {
