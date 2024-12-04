@@ -25,6 +25,17 @@ namespace Cosmolapy.scenes.main
         public Resources resources;
         List<NextMovable> movables;
 
+        public bool alreadyShowPopup;
+
+        public void ShowWinPopup(Popup winPopup)
+        {
+            if (rocket.Progress >= rocket.NeedProgress && !alreadyShowPopup)
+            {
+                alreadyShowPopup = true;
+                winPopup.Popup();
+            }
+        }
+
         public Dictionary<Generators, Generator> generators;
 
         public Generator viewGenerator;
@@ -58,6 +69,8 @@ namespace Cosmolapy.scenes.main
             movables.Add(generators[Generators.mine]);
 
             cardModels = new ListOfCards(generators);
+
+            alreadyShowPopup = false;
 
         }
         public void NextMove()

@@ -41,12 +41,7 @@ public partial class MainView : Node2D
 
     public override void _Process(double delta)
     {
-
-        if (Global.mainModel.rocket.Progress >= Global.mainModel.rocket.NeedProgress && !alreadyShowPopup)
-        {
-            winPopup.Popup();
-            alreadyShowPopup = true;
-        }
+        Global.mainModel.ShowWinPopup(winPopup);
     }
 
 }

@@ -211,11 +211,16 @@ text = "Biofuel: "
 vertical_alignment = 1
 
 [node name="WinPopupMenu" type="PopupMenu" parent="."]
-position = Vector2i(540, 200)
-size = Vector2i(200, 300)
+position = Vector2i(540, 250)
+size = Vector2i(200, 130)
 script = ExtResource("12_w2pf6")
 
 [node name="WinPopupMenu" type="Label" parent="WinPopupMenu"]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Вы достигли цели"
+offset_top = 15.0
+offset_right = 200.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 25
+text = "Вы достигли
+цели"
+horizontal_alignment = 1
+vertical_alignment = 1
