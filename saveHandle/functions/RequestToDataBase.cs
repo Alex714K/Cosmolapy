@@ -31,11 +31,6 @@ public static class RequestToDataBase
         }
     }
 
-    // public static void DeleteData()
-    // {
-    //     DeleteDataFromTable();
-    // }
-
     private static void LoadDataInGlobal(Dictionary<DataType, string> dataTable)
     {
         foreach (DataType key in dataTable.Keys)
