@@ -6,6 +6,10 @@ namespace Cosmolapy.saveHandle;
 
 public static class SaveHandler
 {
+    public static bool CheckIthernet()
+    {
+        return RequestToServer.PingDNS();
+    }
     public static void SaveData()
     {
         RequestToServer.SaveData();

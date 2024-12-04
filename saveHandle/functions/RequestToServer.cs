@@ -4,6 +4,7 @@ using Cosmolapy.saveHandle.structuresOfData.jsonFormats;
 using Cosmolapy.saveHandle.structuresOfData;
 using System.Net.Http.Json;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using GD = Godot;
 
 namespace Cosmolapy.saveHandle.functions;
@@ -139,20 +140,6 @@ public static class RequestToServer
         }
     }
 
-    private static Dictionary<string, string> CreateDataFromGlobal()
-    {
-        Dictionary<string, string> data = new Dictionary<string, string>()
-        {
-            { DataType.Wood.ToString(), Global.mainModel.resources.Wood.ToString() },
-            { DataType.Iron.ToString(), Global.mainModel.resources.Iron.ToString() },
-            { DataType.BioFuel.ToString(), Global.mainModel.resources.BioFuel.ToString() },
-            { DataType.Honey.ToString(), Global.mainModel.resources.Honey.ToString() },
-            { DataType.Password.ToString(), Global.playerRegistrationData.password },
-
-        };
-        return data;
-    }
-
 	private static void LoadDataInGlobal(Dictionary<DataType, string> dataTable)
 	{
 		foreach (DataType key in dataTable.Keys)
@@ -180,6 +167,20 @@ public static class RequestToServer
 			}
 		}
 	}
+
+    private static Dictionary<string, string> CreateDataFromGlobal()
+    {
+        Dictionary<string, string> data = new Dictionary<string, string>()
+        {
+            { DataType.Wood.ToString(), Global.mainModel.resources.Wood.ToString() },
+            { DataType.Iron.ToString(), Global.mainModel.resources.Iron.ToString() },
+            { DataType.BioFuel.ToString(), Global.mainModel.resources.BioFuel.ToString() },
+            { DataType.Honey.ToString(), Global.mainModel.resources.Honey.ToString() },
+            { DataType.Password.ToString(), Global.playerRegistrationData.password },
+
+        };
+        return data;
+    }
 
 	private static List<JsonGetResourcesData> GetPlayerList()
 	{
@@ -228,4 +229,21 @@ public static class RequestToServer
 		return flag;
 	}
 
+	public static bool PingDNS()
+	{
+		string address = "8.8.8.8";
+
+		try 
+		{
+			using (Ping ping = new Ping())
+			{
+				PingReply reply = ping.Send(address);
+				return reply.Status == IPStatus.Success;
+			}
+		}
+		catch
+		{
+			return false;
+		}
+	}
 }
