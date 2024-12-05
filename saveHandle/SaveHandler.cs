@@ -10,20 +10,37 @@ public static class SaveHandler
     {
         return RequestToServer.PingDNS();
     }
+    
     public static void SaveData()
     {
-        RequestToServer.SaveData();
-        RequestToDataBase.SaveData();
+        if (RequestToServer.PingDNS())
+        {
+            RequestToServer.SaveData();
+            RequestToDataBase.SaveData();
+        }
+        else 
+        {
+            RequestToDataBase.SaveData();
+        }
     }
 
     public static void LoadData()
     {
-        RequestToDataBase.LoadData();
-        RequestToServer.LoadData();
+        if (RequestToServer.PingDNS())
+        {
+            RequestToDataBase.LoadData();
+            RequestToServer.LoadData();
+        }
+        else 
+        {
+            RequestToDataBase.LoadData();
+        }
     }
 
     public static bool Auth(PlayerRegistrationData playerRegistrationData)
     {
+        if (!RequestToServer.PingDNS()) return false;
+        
         if (RequestToServer.Auth(playerRegistrationData))
         {
             if (Global.playerRegistrationData.name == playerRegistrationData.name && 
@@ -46,6 +63,8 @@ public static class SaveHandler
 
     public static bool RegisterPlayer(PlayerRegistrationData playerRegistrationData)
     {
+        if (!RequestToServer.PingDNS()) return false;
+        
         RequestToDataBase.CreateTable();
         if (RequestToServer.RegisterPlayer(playerRegistrationData))
         {
@@ -59,6 +78,8 @@ public static class SaveHandler
 
     public static bool UnregisterPlayer(PlayerRegistrationData playerRegistrationData)
     {
+        if (!RequestToServer.PingDNS()) return false;
+        
         if (RequestToServer.UnregisterPlayer(playerRegistrationData))
         {
             Global.playerRegistrationData = new PlayerRegistrationData();
