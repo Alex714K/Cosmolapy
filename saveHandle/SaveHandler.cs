@@ -39,9 +39,7 @@ public static class SaveHandler
 
     public static bool Auth(PlayerRegistrationData playerRegistrationData)
     {
-        if (!RequestToServer.PingDNS()) return false;
-        
-        if (RequestToServer.Auth(playerRegistrationData))
+        if (RequestToServer.PingDNS() && RequestToServer.Auth(playerRegistrationData))
         {
             if (Global.playerRegistrationData.name == playerRegistrationData.name && 
                 Global.playerRegistrationData.password == playerRegistrationData.password) 
@@ -64,7 +62,7 @@ public static class SaveHandler
     public static bool RegisterPlayer(PlayerRegistrationData playerRegistrationData)
     {
         if (!RequestToServer.PingDNS()) return false;
-        
+
         RequestToDataBase.CreateTable();
         if (RequestToServer.RegisterPlayer(playerRegistrationData))
         {
@@ -79,7 +77,7 @@ public static class SaveHandler
     public static bool UnregisterPlayer(PlayerRegistrationData playerRegistrationData)
     {
         if (!RequestToServer.PingDNS()) return false;
-        
+
         if (RequestToServer.UnregisterPlayer(playerRegistrationData))
         {
             Global.playerRegistrationData = new PlayerRegistrationData();
