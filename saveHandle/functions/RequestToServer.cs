@@ -11,6 +11,38 @@ namespace Cosmolapy.saveHandle.functions;
 
 public static class RequestToServer
 {
+	public static bool PostLogPlayer(JsonLogsPlayer jsonLogsPlayer)
+	{
+		using (var client = new HttpClient())
+		{
+			string gameUUID = Global.gameUUID;
+			string name = Global.playerRegistrationData.name;
+
+			Uri uri = new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/logs/");
+
+			JsonContent content = JsonContent.Create(jsonLogsPlayer);
+
+			var response = client.PostAsync(uri, content);
+		}
+		return true;
+	}
+
+	public static bool PostLogShop(JsonLogsShop jsonLogsShop)
+	{
+		using (var client = new HttpClient())
+		{
+			string gameUUID = Global.gameUUID;
+			string name = Global.playerRegistrationData.name;
+
+			Uri uri = new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/logs/");
+
+			JsonContent content = JsonContent.Create(jsonLogsShop);
+
+			var response = client.PostAsync(uri, content);
+		}
+		return true;
+	}
+
 	public static bool SaveData()
 	{
 		using (var client = new HttpClient())
