@@ -1,138 +1,281 @@
 using System;
 using System.Net.Http;
-using Cosmolapy.scenes;
 using Cosmolapy.saveHandle.structuresOfData.jsonFormats;
 using Cosmolapy.saveHandle.structuresOfData;
 using System.Net.Http.Json;
 using System.Collections.Generic;
-using Microsoft.Data.Sqlite;
+using System.Net.NetworkInformation;
 using GD = Godot;
 
 namespace Cosmolapy.saveHandle.functions;
 
 public static class RequestToServer
 {
-    // public static bool UpdateResources(PlayerRegistrationData playerRegistrationData, List<ResourceForServer> resources)
-    public static void UpdateResources()
-    {
+	public static bool PostLogPlayer(JsonLogsPlayer jsonLogsPlayer)
+	{
+		using (var client = new HttpClient())
+		{
+			string gameUUID = Global.gameUUID;
+			string name = Global.playerRegistrationData.name;
 
-    }
+			Uri uri = new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/logs/");
 
-    /// <summary>
-    /// Регистрирует игрока. При неуспешной регистрации возвращает false. При успешной - true.
-    /// </summary>
-    /// <param name="playerRegistrationData"></param>
-    /// <returns>Статус успеха регистрации</returns>
-    public static bool RegisterPlayer(PlayerRegistrationData playerRegistrationData)
+			JsonContent content = JsonContent.Create(jsonLogsPlayer);
+
+			var response = client.PostAsync(uri, content);
+		}
+		return true;
+	}
+
+	public static bool PostLogShop(JsonLogsShop jsonLogsShop)
+	{
+		using (var client = new HttpClient())
+		{
+			string gameUUID = Global.gameUUID;
+			string name = Global.playerRegistrationData.name;
+
+			Uri uri = new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/logs/");
+
+			JsonContent content = JsonContent.Create(jsonLogsShop);
+
+			var response = client.PostAsync(uri, content);
+		}
+		return true;
+	}
+
+	public static bool SaveData()
+	{
+		using (var client = new HttpClient())
+		{
+			string gameUUID = Global.gameUUID;
+			string name = Global.playerRegistrationData.name;
+
+			Uri uri= new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/players/{name}");
+
+			JsonPutData jsonPut = new JsonPutData(CreateDataFromGlobal());
+
+			JsonContent content = JsonContent.Create(jsonPut);
+
+			var response = client.PutAsJsonAsync(uri, content).Result;
+
+			return true;
+		}
+	}
+
+	public static bool LoadData()
+	{
+		using (var client = new HttpClient())
+		{
+			string gameUUID = Global.gameUUID;
+			string name = Global.playerRegistrationData.name;
+
+			Uri uri= new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/players/{name}");
+
+			var response = client.GetAsync(uri).Result;
+
+			JsonGetResourcesData playerData = response.Content.ReadFromJsonAsync<JsonGetResourcesData>().Result;
+
+			LoadDataInGlobal(playerData.resources);
+			LoadDataInGlobal(new Dictionary<string, string>(){ 
+				{ "name", name } 
+			});
+		}
+		return true;
+	}
+
+	/// <summary>
+	/// Регистрирует игрока. При неуспешной регистрации возвращает false. При успешной - true.
+	/// </summary>
+	/// <param name="playerRegistrationData"></param>
+	/// <returns>Статус успеха регистрации</returns>
+	public static bool RegisterPlayer(PlayerRegistrationData playerRegistrationData)
+	{
+		using (var client = new HttpClient())
+		{
+			List<JsonGetResourcesData> listOfPlayers = GetPlayerList();
+			if (IsPlayerInList(playerRegistrationData.name, listOfPlayers)) return false;
+
+			string gameUUID = Global.gameUUID;
+
+			Uri uri= new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/players/");
+
+			JsonGetResourcesData jsonPlayer = new JsonGetResourcesData()
+			{
+				name = playerRegistrationData.name,
+				resources = new Dictionary<string, string> ()
+				{
+					{"password", playerRegistrationData.password},
+				}
+			};
+
+			JsonContent content = JsonContent.Create(jsonPlayer);
+			
+			var response = client.PostAsync(uri, content).Result;
+			
+			return true;
+		}
+	}
+
+	public static bool UnregisterPlayer(PlayerRegistrationData playerRegistrationData)
+	{
+		using (var client = new HttpClient())
+		{
+			List<JsonGetResourcesData> listOfPlayers = GetPlayerList();
+			if (!IsPlayerInListAndWithRightPassword(playerRegistrationData, listOfPlayers)) return false;
+
+			string gameUUID = Global.gameUUID;
+			string name = playerRegistrationData.name;
+
+			Uri uri= new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/players/{name}");
+
+			var response = client.DeleteAsync(uri).Result;
+
+			return true;
+		} 
+	}
+
+	public static bool Auth(PlayerRegistrationData playerRegistrationData)
+	{
+		List<JsonGetResourcesData> listOfPlayers = GetPlayerList();
+
+		if (IsPlayerInListAndWithRightPassword(playerRegistrationData, listOfPlayers)) 
+			return true;
+
+		return false;
+	}
+
+    private static void LoadDataInGlobal(Dictionary<string, string> dataTable)
     {
-        using (var client = new HttpClient())
+        foreach (string key in dataTable.Keys)
         {
-            List<JsonPlayerData> listOfPlayers = GetPlayerList();
-            if (IsPlayerInList(playerRegistrationData.name, listOfPlayers)) return false;
-
-            string gameUUID = Global.gameUUID;
-
-            Uri uri= new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/players/");
-
-            JsonPlayerData jsonPlayer = new JsonPlayerData()
+            switch ((DataType)Enum.Parse(typeof(DataType), key))
             {
-                name = playerRegistrationData.name,
-                resources = new Dictionary<string, string> ()
-                {
-                    {"password", playerRegistrationData.password},
-                }
-            };
-
-            JsonContent content = JsonContent.Create(jsonPlayer);
-
-            client.PostAsync(uri, content);
-
-            return true;
-        }
-    }
-
-    public static bool UnregisterPlayer(PlayerRegistrationData playerRegistrationData)
-    {
-        using (var client = new HttpClient())
-        {
-            List<JsonPlayerData> listOfPlayers = GetPlayerList();
-            if (!IsPlayerInListAndWithRightPassword(playerRegistrationData, listOfPlayers)) return false;
-
-            string gameUUID = Global.gameUUID;
-
-            Uri uri= new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/players/");
-
-            // JsonPlayerData jsonPlayer = new JsonPlayerData()
-            // {
-            //     name = playerRegistrationData.name,
-            //     resources = new Dictionary<string, string> ()
-            //     {
-            //         {"password", playerRegistrationData.password},
-            //     }
-            // };
-
-            // JsonContent content = JsonContent.Create(jsonPlayer);
-
-            client.DeleteAsync(uri);
-
-            return true;
-        } 
-    }
-
-    public static bool TrySignIn(PlayerRegistrationData playerRegistrationData)
-    {
-        List<JsonPlayerData> listOfPlayers = GetPlayerList();
-
-        if (IsPlayerInListAndWithRightPassword(playerRegistrationData, listOfPlayers)) return true;
-
-        return false;
-    }
-
-    private static List<JsonPlayerData> GetPlayerList()
-    {
-        using (var client = new HttpClient())
-        {
-            string gameUUID = Global.gameUUID;
-
-            Uri uri = new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/players/");
-
-            List<JsonPlayerData> listOfPlayers = client.GetFromJsonAsync<List<JsonPlayerData>>(uri).Result;
-
-            return listOfPlayers;
-        }
-    }
-
-    private static bool IsPlayerInListAndWithRightPassword(PlayerRegistrationData playerRegistrationData, List<JsonPlayerData> registrations)
-    {
-        bool flag = false;
-        foreach (JsonPlayerData item in registrations)
-        {
-            if (playerRegistrationData.name == item.name)
-            {
-                if (playerRegistrationData.password == item.resources["password"])
-                    flag = true;
-                break;
+                case DataType.Wood:
+                    Global.mainModel.resources.Wood = Convert.ToInt32(dataTable[key]);
+                    break;
+                case DataType.Iron:
+                    Global.mainModel.resources.Iron = Convert.ToInt32(dataTable[key]);
+                    break;
+                case DataType.BioFuel:
+                    Global.mainModel.resources.BioFuel = Convert.ToInt32(dataTable[key]);
+                    break;
+                case DataType.Honey:
+                    Global.mainModel.resources.Honey = Convert.ToInt32(dataTable[key]);
+                    break;
+                case DataType.Name:
+                    Global.playerRegistrationData.name = dataTable[key];
+                    break;
+                case DataType.Password:
+                    Global.playerRegistrationData.password = dataTable[key];
+                    break;
             }
-
         }
-
-        return flag;
     }
 
-    private static bool IsPlayerInList(string name, List<JsonPlayerData> registrations)
+	private static void LoadDataInGlobal(Dictionary<DataType, string> dataTable)
+	{
+		foreach (DataType key in dataTable.Keys)
+		{
+			switch (key)
+			{
+				case DataType.Wood:
+					Global.mainModel.resources.Wood = Convert.ToInt32(dataTable[key]);
+					break;
+				case DataType.Iron:
+					Global.mainModel.resources.Iron = Convert.ToInt32(dataTable[key]);
+					break;
+				case DataType.BioFuel:
+					Global.mainModel.resources.BioFuel = Convert.ToInt32(dataTable[key]);
+					break;
+				case DataType.Honey:
+					Global.mainModel.resources.Honey = Convert.ToInt32(dataTable[key]);
+					break;
+				case DataType.Name:
+					Global.playerRegistrationData.name = dataTable[key];
+					break;
+				case DataType.Password:
+					Global.playerRegistrationData.password = dataTable[key];
+					break;
+			}
+		}
+	}
+
+    private static Dictionary<string, string> CreateDataFromGlobal()
     {
-        bool flag = false;
-        foreach (JsonPlayerData item in registrations)
+        Dictionary<string, string> data = new Dictionary<string, string>()
         {
-            if (name == item.name)
-            {
-                flag = true;
-                break;
-            }
+            { DataType.Wood.ToString(), Global.mainModel.resources.Wood.ToString() },
+            { DataType.Iron.ToString(), Global.mainModel.resources.Iron.ToString() },
+            { DataType.BioFuel.ToString(), Global.mainModel.resources.BioFuel.ToString() },
+            { DataType.Honey.ToString(), Global.mainModel.resources.Honey.ToString() },
+            { DataType.Password.ToString(), Global.playerRegistrationData.password },
 
-        }
-
-        return flag;
+        };
+        return data;
     }
 
+	private static List<JsonGetResourcesData> GetPlayerList()
+	{
+		using (var client = new HttpClient())
+		{
+			string gameUUID = Global.gameUUID;
+
+			Uri uri = new Uri($"https://2025.nti-gamedev.ru/api/games/{gameUUID}/players/");
+
+			List<JsonGetResourcesData> listOfPlayers = client.GetFromJsonAsync<List<JsonGetResourcesData>>(uri).Result;
+
+			return listOfPlayers;
+		}
+	}
+
+	private static bool IsPlayerInListAndWithRightPassword(PlayerRegistrationData playerRegistrationData, List<JsonGetResourcesData> registrations)
+	{
+		bool flag = false;
+		foreach (JsonGetResourcesData item in registrations)
+		{
+			if (playerRegistrationData.name == item.name)
+			{
+				if (playerRegistrationData.password == item.resources["password"])
+					flag = true;
+				break;
+			}
+
+		}
+
+		return flag;
+	}
+
+	private static bool IsPlayerInList(string name, List<JsonGetResourcesData> registrations)
+	{
+		bool flag = false;
+		foreach (JsonGetResourcesData item in registrations)
+		{
+			if (name == item.name)
+			{
+				flag = true;
+				break;
+			}
+
+		}
+
+		return flag;
+	}
+
+	public static bool PingDNS()
+	{
+		string address = "8.8.8.8";
+
+		try 
+		{
+			using (Ping ping = new Ping())
+			{
+				PingReply reply = ping.Send(address);
+				return reply.Status == IPStatus.Success;
+			}
+		}
+		catch
+		{
+			return false;
+		}
+	}
 }

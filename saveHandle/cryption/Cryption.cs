@@ -1,6 +1,9 @@
+using System;
+using System.Text;
+
 namespace Cosmolapy.saveHandle.cryption;
 
-public class Cryption
+public static class Cryption
 {
 	private const string alphabet = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	private const int distanceOfAlphabet = 36;
@@ -8,7 +11,7 @@ public class Cryption
 	private const int firstKey = 5;
 	private const int secondKey = 7;
 
-	public string Encrypt(string dataString)
+	public static string Encrypt(string dataString)
 	{
 		string dataEncrypted = "";
 		int indexOfSymbol = 0;
@@ -35,7 +38,7 @@ public class Cryption
 		return dataEncrypted;
 	}
 
-	public string Decrypt(string dataString)
+	public static string Decrypt(string dataString)
 	{
 		string dataDecrypted = "";
 		int indexOfSymbol = 0;
@@ -68,7 +71,40 @@ public class Cryption
 		return dataDecrypted;
 	}
 
-	private bool IsSymbolInAlpabet(char symbol)
+	public static long ToUTF8(string dataString)
+	{
+		// Создаем массив байтов из строки с использованием кодировки ASCII
+        byte[] utf8Bytes = Encoding.UTF8.GetBytes(dataString);
+        
+        // Преобразуем байты обратно в строку, используя ASCII
+        StringBuilder sb = new StringBuilder();
+        foreach (byte b in utf8Bytes)
+        {
+            sb.Append(b.ToString("D3").PadLeft(3)); // Форматируем байты как трехзначные числа
+        }
+        
+        // string sbString = sb.ToString().Trim(); // Убираем лишний пробел в конце
+		return Convert.ToInt64(sb.ToString().Trim());
+	}
+
+	public static string ToUTF8()
+	{
+		// Создаем массив байтов из строки с использованием кодировки ASCII
+        byte[] utf8Bytes = Encoding.UTF8.GetBytes("Привет");
+        
+        // Преобразуем байты обратно в строку, используя ASCII
+        StringBuilder sb = new StringBuilder();
+        foreach (byte b in utf8Bytes)
+        {
+            sb.Append(b.ToString("D3").PadLeft(3)); // Форматируем байты как трехзначные числа
+        }
+        
+        // string sbString = sb.ToString().Trim(); // Убираем лишний пробел в конце
+		// return Convert.ToUInt64(sb.ToString().Trim());
+		return sb.ToString().Trim();
+	}
+
+	private static bool IsSymbolInAlpabet(char symbol)
 	{
 		bool flagIfIn = false;
 		foreach (char symbolInLine in alphabet)
@@ -82,7 +118,7 @@ public class Cryption
 		return flagIfIn;
 	}
 
-	private int GetNormalIndexFromAlphabet(int index)
+	private static int GetNormalIndexFromAlphabet(int index)
 	{
         return index % distanceOfAlphabet;
 	}

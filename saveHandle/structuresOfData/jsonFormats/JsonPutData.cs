@@ -2,8 +2,11 @@ using System.Collections.Generic;
 
 namespace Cosmolapy.saveHandle.structuresOfData.jsonFormats;
 
-public struct JsonPlayerData
+public struct JsonPutData
 {
-    public string name;
+    public JsonPutData(Dictionary<string, string> _resources)
+    {
+        resources = _resources;
+    }
     public Dictionary<string, string> resources;
 }
