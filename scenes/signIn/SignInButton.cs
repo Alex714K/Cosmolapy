@@ -1,3 +1,5 @@
+using Cosmolapy.saveHandle.structuresOfData;
+using Cosmolapy.saveHandle;
 using Godot;
 using System;
 
@@ -20,7 +22,10 @@ public partial class SignInButton : Button
 
 	public void buttonPressed()
 	{
-		if (loginTextEdit.Text == "qwe" && passwordTextEdit.Text == "asd")
+		//if (loginTextEdit.Text == "qwe" && passwordTextEdit.Text == "asd")
+		if (SaveHandler.Auth(new PlayerRegistrationData(
+            loginTextEdit.Text, passwordTextEdit.Text
+            )))
 		{
 			GetTree().ChangeSceneToFile("res://scenes/main/main.tscn");
 		}

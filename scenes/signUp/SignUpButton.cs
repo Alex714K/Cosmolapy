@@ -24,6 +24,12 @@ public partial class SignUpButton : Button
         if (SaveHandler.RegisterPlayer(new PlayerRegistrationData(
             loginTextEdit.Text, passwordTextEdit.Text
             )))
+        {
+
             GetTree().ChangeSceneToFile("res://scenes/main/main.tscn");
+            GD.Print("Yes");
+        }
+        else
+            GD.Print("NO");
     }
 }
