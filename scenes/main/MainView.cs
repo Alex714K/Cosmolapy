@@ -30,6 +30,7 @@ public partial class MainView : Node2D
         AddGenerator(Global.mainModel.generators[Generators.mednica], new Vector2(300, 150));
         AddGenerator(Global.mainModel.generators[Generators.laboratory], new Vector2(500, 150));
         AddGenerator(Global.mainModel.generators[Generators.mine], new Vector2(700, 150));
+
     }
 
     private void AddGenerator(Generator data, Vector2 position)
