@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://xb2jqojwku2s"]
+[gd_scene load_steps=14 format=3 uid="uid://xb2jqojwku2s"]
 
 [ext_resource type="Script" path="res://scenes/researches/BackButton.cs" id="1_nhvop"]
 [ext_resource type="Texture2D" uid="uid://daqi8v2ffg1jw" path="res://Images/Gustavo.png" id="1_otihe"]
-[ext_resource type="Script" path="res://scenes/shop/Shop.cs" id="2_fy6yw"]
 [ext_resource type="Script" path="res://scenes/shop/HoneyToWoodButton.cs" id="4_44wh5"]
 [ext_resource type="Script" path="res://scenes/shop/HoneyToIronButton.cs" id="5_db0pr"]
 [ext_resource type="Script" path="res://scenes/shop/HoneyToBiofuelButton.cs" id="6_7g8my"]
@@ -26,7 +25,6 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1280.0
 offset_bottom = 720.0
-script = ExtResource("2_fy6yw")
 
 [node name="BackButton" type="Button" parent="Gui"]
 layout_mode = 0
@@ -64,7 +62,7 @@ offset_top = 31.0
 offset_right = 1177.0
 offset_bottom = 196.0
 theme_override_font_sizes/font_size = 20
-text = "Honey To Iron
+text = "Honey To Biofuel
 100 to 50"
 script = ExtResource("6_7g8my")
 

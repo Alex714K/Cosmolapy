@@ -11,8 +11,6 @@ public partial class CellsView : Node
     private List<CellView> viewCells;
     private CellsViewModel viewModel;
 
-    Label honeyLabel;
-
     List<List<int>> maxWidths = new List<List<int>>();
 
     public override void _Ready()
@@ -21,12 +19,9 @@ public partial class CellsView : Node
         sampleCell = GetTree().Root.GetNode("Researches").GetNode<CellView>("Gui/Cells/BaseCell");
         viewModel = new CellsViewModel(FillCells);
 
-        honeyLabel = GetTree().Root.GetNode("Researches").GetNode<Label>("HoneyLabel");
-
     }
 	public override void _Process(double delta)
 	{
-        honeyLabel.Text = "Honey: " + Global.mainModel.resources.Honey.ToString();
     }
     private void AddCell(Cell cell, Vector2 position)
     {
@@ -44,10 +39,5 @@ public partial class CellsView : Node
 
         AddCell(modelCells[Reseraches.Cheap], new Vector2(300, 100));
         AddCell(modelCells[Reseraches.Cheap].children[0], new Vector2(300, 200));
-
-        //AddCell(modelCells["Rocket"].children[0], new Vector2(120 - 60, 200));
-        //AddCell(modelCells["Rocket"].children[0].children[0], new Vector2(120 - 60, 300));
-        //AddCell(modelCells["Rocket"].children[1], new Vector2(120 + 60, 200));
-        //AddCell(modelCells["Rocket"].children[1].children[0], new Vector2(120 + 60, 300));
     }
 }
