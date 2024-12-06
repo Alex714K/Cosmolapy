@@ -1,11 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://xb2jqojwku2s"]
+[gd_scene load_steps=15 format=3 uid="uid://xb2jqojwku2s"]
 
 [ext_resource type="Script" path="res://scenes/researches/BackButton.cs" id="1_nhvop"]
-[ext_resource type="Texture2D" uid="uid://daqi8v2ffg1jw" path="res://scenes/shop/Gustavo.png" id="1_otihe"]
+[ext_resource type="Texture2D" uid="uid://daqi8v2ffg1jw" path="res://Images/Gustavo.png" id="1_otihe"]
 [ext_resource type="Script" path="res://scenes/shop/Shop.cs" id="2_fy6yw"]
 [ext_resource type="Script" path="res://scenes/shop/HoneyToWoodButton.cs" id="4_44wh5"]
 [ext_resource type="Script" path="res://scenes/shop/HoneyToIronButton.cs" id="5_db0pr"]
 [ext_resource type="Script" path="res://scenes/shop/HoneyToBiofuelButton.cs" id="6_7g8my"]
+[ext_resource type="Script" path="res://scenes/main/Resources/HoneyLabel.cs" id="7_24nx5"]
+[ext_resource type="Script" path="res://scenes/main/Resources/WoodLabel.cs" id="8_rayeb"]
+[ext_resource type="Script" path="res://scenes/main/Resources/IronLabel.cs" id="9_hgr3i"]
+[ext_resource type="Script" path="res://scenes/main/Resources/BiofuelLabel.cs" id="10_uvqkc"]
+[ext_resource type="Texture2D" uid="uid://crkaeo4emwu66" path="res://Images/Resources/Honey.png" id="11_c40fw"]
+[ext_resource type="Texture2D" uid="uid://w2qimqkhia6r" path="res://Images/Resources/Wood.png" id="12_8uk86"]
+[ext_resource type="Texture2D" uid="uid://cg5ieuplg15f0" path="res://Images/Resources/Iron.png" id="13_pkqms"]
+[ext_resource type="Texture2D" uid="uid://6veyobxdmw2d" path="res://Images/Resources/Biofuel.png" id="14_lgrpk"]
 
 [node name="Shop" type="Node2D"]
 
@@ -26,25 +34,6 @@ offset_right = 100.0
 offset_bottom = 100.0
 theme_override_font_sizes/font_size = 25
 script = ExtResource("1_nhvop")
-
-[node name="HoneyLabel" type="Label" parent="Gui"]
-layout_mode = 0
-offset_left = 275.0
-offset_top = 1.0
-offset_right = 395.0
-offset_bottom = 81.0
-theme_override_font_sizes/font_size = 35
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="WoodLabel" type="Label" parent="Gui"]
-layout_mode = 0
-offset_left = 140.0
-offset_right = 260.0
-offset_bottom = 80.0
-theme_override_font_sizes/font_size = 35
-horizontal_alignment = 2
-vertical_alignment = 1
 
 [node name="HoneyToWoodButton" type="Button" parent="Gui"]
 layout_mode = 0
@@ -78,3 +67,89 @@ theme_override_font_sizes/font_size = 20
 text = "Honey To Iron
 100 to 50"
 script = ExtResource("6_7g8my")
+
+[node name="Resources" type="Control" parent="Gui"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HoneyLabel" type="Label" parent="Gui/Resources"]
+layout_mode = 0
+offset_left = 100.0
+offset_right = 210.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 34
+text = "100
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("7_24nx5")
+
+[node name="WoodLabel" type="Label" parent="Gui/Resources"]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 410.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 34
+text = "200"
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("8_rayeb")
+
+[node name="IronLabel" type="Label" parent="Gui/Resources"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 80.0
+offset_right = 209.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 34
+text = "300"
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("9_hgr3i")
+
+[node name="BiofuelLabel" type="Label" parent="Gui/Resources"]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 80.0
+offset_right = 409.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 34
+text = "400"
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("10_uvqkc")
+
+[node name="HoneyRect" type="TextureRect" parent="Gui/Resources"]
+layout_mode = 0
+offset_left = 215.0
+offset_right = 295.0
+offset_bottom = 80.0
+texture = ExtResource("11_c40fw")
+expand_mode = 1
+
+[node name="WoodRect" type="TextureRect" parent="Gui/Resources"]
+layout_mode = 0
+offset_left = 415.0
+offset_right = 495.0
+offset_bottom = 80.0
+texture = ExtResource("12_8uk86")
+expand_mode = 1
+
+[node name="IronRect" type="TextureRect" parent="Gui/Resources"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 80.0
+offset_right = 294.0
+offset_bottom = 160.0
+texture = ExtResource("13_pkqms")
+expand_mode = 1
+
+[node name="BiofuelRect" type="TextureRect" parent="Gui/Resources"]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 80.0
+offset_right = 494.0
+offset_bottom = 160.0
+texture = ExtResource("14_lgrpk")
+expand_mode = 1

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daqi8v2ffg1jw"
-path="res://.godot/imported/Gustavo.png-3f3c5bde2c9e5a255f47141c249469b7.ctex"
+uid="uid://crkaeo4emwu66"
+path="res://.godot/imported/Honey.png-9433d938fc1c3b85b51c0e937f2306d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/shop/Gustavo.png"
-dest_files=["res://.godot/imported/Gustavo.png-3f3c5bde2c9e5a255f47141c249469b7.ctex"]
+source_file="res://Images/Resources/Honey.png"
+dest_files=["res://.godot/imported/Honey.png-9433d938fc1c3b85b51c0e937f2306d2.ctex"]
 
 [params]
 

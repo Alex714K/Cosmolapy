@@ -10,6 +10,6 @@ public partial class BiofuelLabel : Label
 
 	public override void _Process(double delta)
 	{
-		Text = "Biofuel: " + Global.mainModel.resources.BioFuel.ToString();
+		Text = Global.mainModel.resources.BioFuel.ToString();
 	}
 }
