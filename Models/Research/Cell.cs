@@ -27,8 +27,11 @@ namespace Cosmolapy.scenes.researches
         public bool parentDone;
 
         ActionSetDone actionSetDone;
+        ActionSetDoneXY actionSetDoneXY;
+
 
         public delegate void ActionSetDone();
+        public delegate void ActionSetDoneXY(int x, int y);
 
         public Cell(CellData _data, bool _parentDone, ActionSetDone _actionSetDone)
         {
@@ -38,8 +41,19 @@ namespace Cosmolapy.scenes.researches
             parentDone = _parentDone;
         }
 
+        public Cell(CellData _data, bool _parentDone, ActionSetDoneXY _actionSetDoneXY)
+        {
+            actionSetDoneXY = _actionSetDoneXY;
+            children = new List<Cell>();
+            data = _data;
+            parentDone = _parentDone;
+        }
+
         public Cell(string _name, int _priceHoney, bool _parentDone, ActionSetDone _actionSetDone)
             : this(new CellData(_name, _priceHoney), _parentDone, _actionSetDone) { }
+
+        public Cell(string _name, int _priceHoney, bool _parentDone, ActionSetDoneXY _actionSetDoneXY)
+            : this(new CellData(_name, _priceHoney), _parentDone, _actionSetDoneXY) { }
 
 
         List<Cell> GetChildren()
